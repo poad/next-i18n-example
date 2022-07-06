@@ -1,0 +1,62 @@
+{
+  "name": "next-html-import-example",
+  "version": "0.0.1",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "jest --passWithNoTests",
+    "dev": "next",
+    "export": "next build && next export",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --ext .ts,.js,.tsx,.jsx src",
+    "clean": "rimraf build",
+    "analyze": "ANALYZE=true next build",
+    "all": "yarn install && yarn lint && yarn build && yarn test"
+  },
+  "dependencies": {
+    "@emotion/cache": "*",
+    "@emotion/react": "*",
+    "@emotion/server": "*",
+    "@emotion/styled": "*",
+    "@mui/icons-material": "*",
+    "@mui/material": "*",
+    "@mui/styles": "*",
+    "@types/react": "*",
+    "next": "*",
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "*",
+    "@swc/jest": "*",
+    "@types/jest": "*",
+    "@types/node": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-config-airbnb-typescript": "*",
+    "eslint-config-import": "*",
+    "eslint-config-next": "*",
+    "eslint-import-resolver-typescript": "*",
+    "eslint-plugin-flowtype": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jest": "*",
+    "eslint-plugin-jsx-a11y": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
+    "jest": "*",
+    "next-compose-plugins": "*",
+    "rimraf": "*",
+    "swc-loader": "*",
+    "typescript": "*"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(t|j)sx?$": [
+        "@swc/jest"
+      ]
+    }
+  }
+}
