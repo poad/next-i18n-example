@@ -16,12 +16,15 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Use Node.js 14.x
+    - name: Use Node.js 16.x
       uses: actions/setup-node@v3.3.0
       with:
-        node-version: 14.x
+        node-version: 16.x
         check-latest: true
         cache: yarn
+        cache-dependency-path: |
+          app/yarn.lock
+          infra/yarn.lock
 
     - name: Get yarn cache directory path
       id: yarn-cache-dir-path
@@ -35,10 +38,14 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-yarn-
 
-    - run: yarn install
-    - run: yarn lint
-    - run: yarn build
-    - run: yarn test
+    - name: Build (app)
+      working-directory: app
+      run: yarn install; yarn lint && rm -rf build && yarn build && yarn test && rm -rf build && yarn export
+  
+    - name: Build (infra)
+      working-directory: infra
+      run: yarn install; rm -rf build && yarn build
+
   
   configure:
     runs-on: ubuntu-latest
