@@ -1,0 +1,57 @@
+name: Build and Test
+ 
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:    
+    - main 
+
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v3.3.0
+      with:
+        node-version: 14.x
+        check-latest: true
+        cache: yarn
+
+    - name: Get yarn cache directory path
+      id: yarn-cache-dir-path
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+
+    - uses: actions/cache@v3
+      id: yarn-cache
+      with:
+        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+
+    - run: yarn install
+    - run: yarn lint
+    - run: yarn build
+    - run: yarn test
+  
+  configure:
+    runs-on: ubuntu-latest
+
+    if: github.actor != 'dependabot[bot]'
+
+    steps:
+    - name: Pull request auto merge enabler
+      if: github.event_name == 'pull_request'
+      uses: poad/github-pull-request-auto-merge-enable-action@v1.0.2
+      with:
+        pull_request_id: ${{ github.event.pull_request.node_id }}
+        github_token: ${{ secrets.PERSONAL_TOKEN_FOR_GITHUB_ACTIONS }}
+        repository: ${{ github.event.repository.name }}
+        owner: ${{ github.repository_owner }}
+        merge_method: SQUASH
