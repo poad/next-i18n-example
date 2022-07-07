@@ -7,17 +7,22 @@ import MenuIcon from '@mui/icons-material/Menu';
 import {
   useTheme,
 } from '@mui/material/styles';
+import Head from 'next/head';
+import { useTranslation } from 'react-i18next';
+import LangSwitcher from 'components/LangSwitcher';
 
 const drawerWidth = 240;
 
 interface LayoutProps {
-  container?: Element
+  container?: Element,
+  title?: string,
 }
 
 const Layout = (props: PropsWithChildren<LayoutProps>) => {
-  const { container } = props;
+  const { container, title } = props;
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const { t } = useTranslation();
 
   function handleDrawerToggle() {
     setMobileOpen(!mobileOpen);
@@ -57,7 +62,8 @@ const Layout = (props: PropsWithChildren<LayoutProps>) => {
         >
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6" noWrap></Typography>
+        <Typography variant="h6" noWrap sx={{ flexGrow: 1 }}></Typography>
+        <LangSwitcher />
       </Toolbar>
     </AppBar>
   );
@@ -87,12 +93,19 @@ const Layout = (props: PropsWithChildren<LayoutProps>) => {
   );
 
   return (
-    <Box sx={{ color: theme.palette.primary.contrastText, display: 'flex', maxHeight: '100vh' }}>
-      <CssBaseline />
-      {appBar}
-      {drawerBox}
-      {props.children}
-    </Box>
+    <>
+      <Head>
+        <title>{title ? title.concat(' - ', t('common:appName')) : t('common:appName')}</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Box sx={{ color: theme.palette.primary.contrastText, display: 'flex', maxHeight: '100vh' }}>
+        <CssBaseline />
+        {appBar}
+        {drawerBox}
+        {props.children}
+      </Box>
+    </>
   );
 };
 

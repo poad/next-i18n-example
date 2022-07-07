@@ -1,0 +1,11 @@
+{
+  "title": "ホーム",
+  "h1": "Next.js へようこそ!",
+  "navigation": "まずは、<0>{{code}}</0>を編集し、保存して再読み込みしてください。",
+  "doc": "ドキュメンテーション",
+  "docDesc": "Next.jsの詳細については、ドキュメントをご覧ください。",
+  "learn": "Next.js を学ぶ",
+  "learnDesc": "インタラクティブなチュートリアルでNext.jsを学ぼう!",
+  "examples": "例",
+  "examplesDesc": "他のボイラープレートのサンプルはNext.jsのGitHubでご覧ください。"
+}

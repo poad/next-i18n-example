@@ -2,7 +2,6 @@
   "name": "next-ts-template",
   "version": "0.0.1",
   "private": true,
-  "type": "module",
   "scripts": {
     "test": "jest --passWithNoTests",
     "dev": "next",
@@ -24,6 +23,7 @@
     "@mui/styles": "*",
     "autoprefixer": "*",
     "next": "*",
+    "next-i18next": "*",
     "postcss": "*",
     "react": "*",
     "react-dom": "*",

@@ -1,0 +1,11 @@
+{
+  "title": "Home",
+  "h1": "Welcome to Next.js!",
+  "navigation": "To get started, edit <0>{{code}}</0> and save to reload.",
+  "doc": "Documentation",
+  "docDesc": "Learn more about Next.js in the documentation.",
+  "learn": "Next.js Learn",
+  "learnDesc": "Learn about Next.js by following an interactive tutorial!",
+  "examples": "Examples",
+  "examplesDesc": "Find other example boilerplates on the Next.js GitHub."
+}

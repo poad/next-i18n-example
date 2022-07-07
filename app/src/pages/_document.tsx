@@ -3,13 +3,20 @@ import createEmotionServer from '@emotion/server/create-instance';
 import theme from '../styles/theme';
 import createCache from '@emotion/cache';
 import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { i18n } from '../../next-i18next.config';
+import { GetStaticProps } from 'next';
 
 export default class NextDocument extends Document {
+  static getStaticProps: GetStaticProps;
+
   static getInitialProps: (ctx: DocumentContext) => Promise<DocumentInitialProps>;
 
   render(): JSX.Element {
+    const currentLocale =
+      this.props.__NEXT_DATA__.locale || i18n.defaultLocale;
     return (
-      <Html lang="en">
+      <Html lang={currentLocale}>
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
@@ -27,6 +34,15 @@ export default class NextDocument extends Document {
     );
   }
 }
+
+NextDocument.getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale || 'ja', ['common', 'home'])),
+      // Will be passed to the page component as props
+    },
+  };
+};
 
 NextDocument.getInitialProps = async (ctx: DocumentContext) => {
 

@@ -1,23 +1,18 @@
 /** @type {import('next').NextConfig} */
-import withPlugins from 'next-compose-plugins';
-import withBundleAnalyzer from '@next/bundle-analyzer';
+const withBundleAnalyzer = require('@next/bundle-analyzer');
 const analyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
+const { i18n } = require('./next-i18next.config');
 
-export const config = withPlugins([
-  [analyzer],
-],
-  {
-    webpack5: true,
-    reactStrictMode: true,
-    esmExternals: true,
-    swcLoader: true,
-    swcMinify: true,
-    experimental: {
-      modern: true,
-    }
-  }
+const config = analyzer({
+  i18n,
+  webpack5: true,
+  reactStrictMode: true,
+  esmExternals: true,
+  swcLoader: true,
+  swcMinify: true,
+}
 );
 
-export default config;
+module.exports = config;
