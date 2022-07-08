@@ -1,42 +1,13 @@
 import React from 'react';
-import { Box, Link, Typography } from '@mui/material';
-import { styled } from '@mui/system';
+import { Box, Typography } from '@mui/material';
 import { Trans, useTranslation } from 'react-i18next';
 
 import Layout from '../components/Layout';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import StyledBox from 'components/styled/StyledBox';
+import CardStyleLink from 'components/styled/CardStyleLink';
+import { i18n } from '../../next-i18next.config';
 
-const StyledBox = styled(Box)(() => ({
-  maxWidth: '880px',
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-around',
-  margin: '80px auto 40px',
-  textDecoration: 'none',
-}));
-
-const CardStyleLink = styled(Link)(() => ({
-  padding: '18px 18px 24px',
-  width: '220px',
-  textAlign: 'left',
-  color: '#434343',
-  border: '1px solid #9b9b9b',
-  textDecoration: 'none',
-  '&:hover, &.Mui-focusVisible, &.Mui-active': {
-    borderColor: '#067df7',
-  },
-  '& h3': {
-    margin: '0',
-    color: '#067df7',
-    fontSize: '18px',
-  },
-  '& p': {
-    margin: '0',
-    padding: '12px 0 0',
-    color: '#333',
-    fontSize: '13px',
-  },
-}));
 
 const Home = (): JSX.Element => {
   const { t } = useTranslation();
@@ -92,7 +63,7 @@ const Home = (): JSX.Element => {
 export const getStaticProps = async ({ locale }: { locale?: string }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale || 'ja', ['common', 'home'])),
+      ...(await serverSideTranslations(locale || 'ja', ['common', 'home'], { i18n })),
       // Will be passed to the page component as props
     },
   };

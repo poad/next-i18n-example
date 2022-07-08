@@ -6,7 +6,6 @@
     "test": "jest --passWithNoTests",
     "dev": "next",
     "build": "next build",
-    "export": "next export",
     "start": "next start",
     "analyze": "ANALYZE=true next build",
     "lint": "eslint --ext .ts,.js,.tsx,.jsx src",
@@ -57,7 +56,6 @@
     "next-transpile-modules": "*",
     "prettier": "*",
     "rimraf": "*",
-    "swc-loader": "*",
     "typescript": "*"
   },
   "jest": {
@@ -66,5 +64,8 @@
         "@swc/jest"
       ]
     }
+  },
+  "optionalDependencies": {
+    "@next/swc-linux-x64-gnu": "11.1.2"
   }
 }

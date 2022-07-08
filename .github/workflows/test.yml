@@ -40,7 +40,7 @@ jobs:
 
     - name: Build (app)
       working-directory: app
-      run: yarn install; yarn lint && rm -rf build && yarn build && yarn test && rm -rf build && yarn export
+      run: yarn install; yarn lint && rm -rf build && yarn build && yarn test && rm -rf build
   
     - name: Build (infra)
       working-directory: infra

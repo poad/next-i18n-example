@@ -1,65 +1,94 @@
-import { Stack, StackProps } from 'aws-cdk-lib';
+import * as amplify from '@aws-cdk/aws-amplify-alpha';
+import { GitHubSourceCodeProvider } from '@aws-cdk/aws-amplify-alpha';
+import { SecretValue, Stack, StackProps } from 'aws-cdk-lib';
+import { BuildSpec } from 'aws-cdk-lib/aws-codebuild';
+import { Role, ServicePrincipal, ManagedPolicy } from 'aws-cdk-lib/aws-iam';
 import { Construct } from 'constructs';
-import * as s3 from 'aws-cdk-lib/aws-s3';
-import * as cf from 'aws-cdk-lib/aws-cloudfront';
-import { RemovalPolicy } from 'aws-cdk-lib';
-import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
-import { Effect, PolicyStatement, StarPrincipal } from 'aws-cdk-lib/aws-iam';
-import { HttpOrigin } from 'aws-cdk-lib/aws-cloudfront-origins';
-import { CachePolicy, OriginProtocolPolicy } from 'aws-cdk-lib/aws-cloudfront';
-import * as crypto from 'crypto';
 
 export interface InfraStackProps extends StackProps {
-  name: string,
-  region: string,
+  accessToken: string,
 }
 
 export class InfraStack extends Stack {
   constructor(scope: Construct, id: string, props: InfraStackProps) {
     super(scope, id, props);
 
+    const { accessToken } = props;
 
-    const hash = crypto.createHash("md5").update(new Date().getTime().toString()).digest('hex');
-
-    const s3BucketName = `${props.name}-static-site`;
-
-    new cf.Distribution(this, 'CloudFront', {
-      defaultBehavior: {
-        origin: new HttpOrigin(`${s3BucketName}.s3-website-${props.region}.amazonaws.com`, {
-          customHeaders: {
-            'Referer': hash
-          },
-          protocolPolicy: OriginProtocolPolicy.HTTP_ONLY,
-        }),
-        cachePolicy: CachePolicy.CACHING_DISABLED,
-
+    const app = new amplify.App(this, 'AmplifyApp', {
+      appName: 'next-i18n-example',
+      sourceCodeProvider: new GitHubSourceCodeProvider({
+        owner: 'poad',
+        repository: 'next-i18n-example',
+        oauthToken: SecretValue.unsafePlainText(accessToken)
+      }),
+      autoBranchDeletion: true,
+      customResponseHeaders: [],
+      environmentVariables: {
+        AMPLIFY_MONOREPO_APP_ROOT: 'app',
+        SSR_IS_ENABLED: 'true',
+        IS_SSR: 'true',
+        _LIVE_UPDATES: '[{"name":"Node.js version","pkg":"node","type":"nvm","version":"16"},{"name":"Next.js version","pkg":"next-version","type":"internal","version":"latest"},{"name":"Yarn","pkg":"yarn","type":"npm","version":"latest"}]'
       },
-      enableIpv6: false,
-      defaultRootObject: 'index.html',
+      role: new Role(this, 'AmplifyAppServiceRole', {
+        roleName: 'NextI18nExampleAmplifyAppServiceRole',
+        assumedBy: new ServicePrincipal('amplify.amazonaws.com'),
+        managedPolicies: [
+          ManagedPolicy.fromAwsManagedPolicyName('AdministratorAccess-Amplify')
+        ]
+      }),
+      buildSpec: BuildSpec.fromObjectToYaml({
+        version: 1,
+        applications: [
+          {
+            // backend: {
+            //   phases: {
+            //     preBuild: {
+            //       commands: [
+            //         'yarn install'
+            //       ],
+            //     },
+            //     build: {
+            //       commands: [
+            //         'yarn build'
+            //       ],
+            //     },
+            //   },
+            // },
+            frontend: {
+              phases: {
+                preBuild: {
+                  commands: [
+                    'yum remove openssl-devel -y',
+                    'yum install openssl11 openssl11-devel -y',
+                    'yarn install'
+                  ],
+                },
+                build: {
+                  commands: [
+                    'yarn build'
+                  ],
+                },
+              },
+              artifacts: {
+                baseDirectory: '.next',
+                files: [
+                  '**/*'
+                ],
+              },
+              cache: {
+                paths: 'node_modules'
+              },
+            },
+            appRoot: 'app'
+          }
+        ]
+      })
     });
-
-    const s3bucket = new s3.Bucket(this, 'S3Bucket', {
-      bucketName: s3BucketName,
-      versioned: false,
-      removalPolicy: RemovalPolicy.DESTROY,
-      autoDeleteObjects: false,
-      accessControl: s3.BucketAccessControl.PRIVATE,
-      publicReadAccess: false,
-      websiteIndexDocument: 'index.html',
+    new amplify.Branch(this, 'AmplifyBranch', {
+      app,
+      branchName: 'main',
+      autoBuild: false
     });
-
-    new s3deploy.BucketDeployment(this, 'DeployWebsite', {
-      sources: [s3deploy.Source.asset(`${process.cwd()}/../app/out`)],
-      destinationBucket: s3bucket,
-      destinationKeyPrefix: '/',
-      exclude: ['.DS_Store', '*/.DS_Store'],
-    });
-
-    s3bucket.addToResourcePolicy(new PolicyStatement({
-      effect: Effect.ALLOW,
-      actions: ['s3:GetObject'],
-      principals: [new StarPrincipal()],
-      resources: [`${s3bucket.bucketArn}/*`],
-    }));
   }
 }
