@@ -10,6 +10,7 @@ import {
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
 import LangSwitcher from 'components/LangSwitcher';
+import GitHubProjectLink from 'components/GitHubProjectLink';
 
 const drawerWidth = 240;
 
@@ -105,6 +106,10 @@ const Layout = (props: PropsWithChildren<LayoutProps>) => {
         {drawerBox}
         {props.children}
       </Box>
+
+      <footer>
+        <GitHubProjectLink owener='poad' repo='next-i18n-example' />
+      </footer>
     </>
   );
 };
