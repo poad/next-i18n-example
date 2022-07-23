@@ -1,11 +1,19 @@
-name: Build and Test
+name: Deploy
  
 on:
-  pull_request_target:
-    branches:
-      - main
+  push:
+    branches:    
+    - main 
 
   workflow_dispatch:
+
+
+env:
+  AWS_REGION: us-west-2
+
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
   test:
@@ -22,6 +30,12 @@ jobs:
         cache-dependency-path: |
           app/yarn.lock
           infra/yarn.lock
+
+    - name: Update npm
+      run: sudo npm -g upgrade
+
+    - name: Install aws-cdk
+      run: sudo yarn global add yarn aws-cdk
 
     - name: Get yarn cache directory path
       id: yarn-cache-dir-path
@@ -43,19 +57,13 @@ jobs:
       working-directory: infra
       run: yarn install; rm -rf build && yarn build
 
-  
-  configure:
-    runs-on: ubuntu-latest
-
-    if: github.actor != 'dependabot[bot]'
-
-    steps:
-    - name: Pull request auto merge enabler
-      if: github.event_name == 'pull_request'
-      uses: poad/github-pull-request-auto-merge-enable-action@v1.0.2
+    - name: configure aws credentials
+      uses: aws-actions/configure-aws-credentials@v1
       with:
-        pull_request_id: ${{ github.event.pull_request.node_id }}
-        github_token: ${{ secrets.PERSONAL_TOKEN_FOR_GITHUB_ACTIONS }}
-        repository: ${{ github.event.repository.name }}
-        owner: ${{ github.repository_owner }}
-        merge_method: SQUASH
+        role-to-assume: ${{ secrets.AWS_OIDC_ROLE_ARN }}
+        role-session-name: GitHubActions
+        aws-region: ${{ env.AWS_REGION }}
+
+    - name: Deploy
+      working-directory: infra
+      run: cdk deploy -c env=dev
