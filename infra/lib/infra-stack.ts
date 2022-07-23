@@ -1,94 +1,55 @@
-import * as amplify from '@aws-cdk/aws-amplify-alpha';
-import { GitHubSourceCodeProvider } from '@aws-cdk/aws-amplify-alpha';
-import { SecretValue, Stack, StackProps } from 'aws-cdk-lib';
-import { BuildSpec } from 'aws-cdk-lib/aws-codebuild';
-import { Role, ServicePrincipal, ManagedPolicy } from 'aws-cdk-lib/aws-iam';
+import { Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+import * as cf from 'aws-cdk-lib/aws-cloudfront';
+import { RemovalPolicy } from 'aws-cdk-lib';
+import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
+import { S3Origin } from 'aws-cdk-lib/aws-cloudfront-origins';
+import { CachePolicy } from 'aws-cdk-lib/aws-cloudfront';
+import { CacheControl } from 'aws-cdk-lib/aws-codepipeline-actions';
 
 export interface InfraStackProps extends StackProps {
-  accessToken: string,
+  appName: string
 }
 
 export class InfraStack extends Stack {
   constructor(scope: Construct, id: string, props: InfraStackProps) {
     super(scope, id, props);
 
-    const { accessToken } = props;
+    const { appName } = props;
 
-    const app = new amplify.App(this, 'AmplifyApp', {
-      appName: 'next-i18n-example',
-      sourceCodeProvider: new GitHubSourceCodeProvider({
-        owner: 'poad',
-        repository: 'next-i18n-example',
-        oauthToken: SecretValue.unsafePlainText(accessToken)
-      }),
-      autoBranchDeletion: true,
-      customResponseHeaders: [],
-      environmentVariables: {
-        AMPLIFY_MONOREPO_APP_ROOT: 'app',
-        SSR_IS_ENABLED: 'true',
-        IS_SSR: 'true',
-        _LIVE_UPDATES: '[{"name":"Node.js version","pkg":"node","type":"nvm","version":"16"},{"name":"Next.js version","pkg":"next-version","type":"internal","version":"latest"},{"name":"Yarn","pkg":"yarn","type":"npm","version":"latest"}]'
-      },
-      role: new Role(this, 'AmplifyAppServiceRole', {
-        roleName: 'NextI18nExampleAmplifyAppServiceRole',
-        assumedBy: new ServicePrincipal('amplify.amazonaws.com'),
-        managedPolicies: [
-          ManagedPolicy.fromAwsManagedPolicyName('AdministratorAccess-Amplify')
-        ]
-      }),
-      buildSpec: BuildSpec.fromObjectToYaml({
-        version: 1,
-        applications: [
-          {
-            // backend: {
-            //   phases: {
-            //     preBuild: {
-            //       commands: [
-            //         'yarn install'
-            //       ],
-            //     },
-            //     build: {
-            //       commands: [
-            //         'yarn build'
-            //       ],
-            //     },
-            //   },
-            // },
-            frontend: {
-              phases: {
-                preBuild: {
-                  commands: [
-                    'yum remove openssl-devel -y',
-                    'yum install openssl11 openssl11-devel -y',
-                    'yarn install'
-                  ],
-                },
-                build: {
-                  commands: [
-                    'yarn build'
-                  ],
-                },
-              },
-              artifacts: {
-                baseDirectory: '.next',
-                files: [
-                  '**/*'
-                ],
-              },
-              cache: {
-                paths: 'node_modules'
-              },
-            },
-            appRoot: 'app'
-          }
-        ]
-      })
+    const s3bucket = new s3.Bucket(this, 'S3Bucket', {
+      bucketName: appName,
+      versioned: false,
+      removalPolicy: RemovalPolicy.DESTROY,
+      autoDeleteObjects: false,
+      accessControl: s3.BucketAccessControl.PRIVATE,
+      publicReadAccess: false,
     });
-    new amplify.Branch(this, 'AmplifyBranch', {
-      app,
-      branchName: 'main',
-      autoBuild: false
+
+    new cf.Distribution(this, 'CloudFront', {
+      comment: `for ${appName}`,
+      defaultBehavior: {
+        origin: new S3Origin(s3bucket, {
+          originAccessIdentity: new cf.OriginAccessIdentity(this, 'CloudFrontS3OriginAccessIdentity', {
+          })
+        }),
+        cachePolicy: CachePolicy.CACHING_OPTIMIZED_FOR_UNCOMPRESSED_OBJECTS,
+        
+      },
+      enableIpv6: false,
+      defaultRootObject: 'index.html',
+    });
+
+    new s3deploy.BucketDeployment(this, 'DeployWebsite', {
+      sources: [s3deploy.Source.asset(`${process.cwd()}/../app/out`)],
+      destinationBucket: s3bucket,
+      destinationKeyPrefix: '/',
+      exclude: ['.DS_Store', '*/.DS_Store', '_next/static/wasm/webassembly.wasm'],
+      prune: true,
+      cacheControl: [
+        CacheControl.noCache()
+      ]
     });
   }
 }

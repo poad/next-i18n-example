@@ -1,1 +1,1 @@
-# next-ts-template
+# Example of next-i18next

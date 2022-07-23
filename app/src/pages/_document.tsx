@@ -3,7 +3,6 @@ import createEmotionServer from '@emotion/server/create-instance';
 import theme from '../styles/theme';
 import createCache from '@emotion/cache';
 import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { i18n } from '../../next-i18next.config';
 import { GetStaticProps } from 'next';
 
@@ -34,15 +33,6 @@ export default class NextDocument extends Document {
     );
   }
 }
-
-NextDocument.getStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale || 'ja', ['common', 'home'])),
-      // Will be passed to the page component as props
-    },
-  };
-};
 
 NextDocument.getInitialProps = async (ctx: DocumentContext) => {
 
