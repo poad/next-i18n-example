@@ -28,6 +28,9 @@
     "@aws-cdk/core:target-partitions": [
       "aws",
       "aws-cn"
-    ]
+    ],
+    "dev": {
+      "appName": "next-i18n-example"      
+    }
   }
 }

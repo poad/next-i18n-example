@@ -1,12 +1,25 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import { InfraStack } from '../lib/infra-stack';
+import { InfraStack, InfraStackProps } from '../lib/infra-stack';
+import { Tags } from 'aws-cdk-lib';
+import assert = require('node:assert');
+import { nextJsExport } from '../lib/process/setup';
 
 const app = new cdk.App();
 
-const accessToken = app.node.tryGetContext('token') as string;
+nextJsExport();
 
-new InfraStack(app, 'next-i18n-example', {
-  accessToken
+const env = app.node.tryGetContext('env') as string;
+
+assert(env !== undefined, "env context must not be undefined");
+
+const config = app.node.tryGetContext(env) as InfraStackProps;
+
+const stackName = `${config.appName}-stack`;
+
+const stack = new InfraStack(app, stackName, {
+  ...config
 });
+
+Tags.of(stack).add("cloudformation-stack-name", stackName);
