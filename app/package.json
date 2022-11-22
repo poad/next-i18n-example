@@ -24,11 +24,13 @@
     "@emotion/styled": "*",
     "@mui/icons-material": "*",
     "@mui/material": "*",
+    "i18next": "*",
     "next": "^13",
     "next-i18next": "*",
     "next-language-detector": "*",
     "react": "*",
     "react-dom": "*",
+    "react-i18next": "*",
     "web-vitals": "*"
   },
   "devDependencies": {
