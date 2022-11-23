@@ -16,7 +16,7 @@ const drawerWidth = 240;
 
 interface LayoutProps {
   container?: Element,
-  title?: string,
+  title?: string | null,
 }
 
 const Layout = (props: PropsWithChildren<LayoutProps>) => {
