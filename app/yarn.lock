@@ -889,11 +889,6 @@
   resolved "https://registry.yarnpkg.com/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-13.0.6.tgz#4a5e91a36cf140cad974df602d647e64b1b9473f"
   integrity sha512-/7RF03C3mhjYpHN+pqOolgME3guiHU5T3TsejuyteqyEyzdEyLHod+jcYH6ft7UZ71a6TdOewvmbLOtzHW2O8A==
 
-"@next/swc-linux-x64-gnu@11.1.2":
-  version "11.1.2"
-  resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-11.1.2.tgz#8216b2ae1f21f0112958735c39dd861088108f37"
-  integrity sha512-YcDHTJjn/8RqvyJVB6pvEKXihDcdrOwga3GfMv/QtVeLphTouY4BIcEUfrG5+26Nf37MP1ywN3RRl1TxpurAsQ==
-
 "@next/swc-linux-x64-gnu@13.0.6":
   version "13.0.6"
   resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-13.0.6.tgz#accb8a721a99e704565b936f16e96fa0c67e8db1"
@@ -2718,9 +2713,9 @@ i18next-fs-backend@^2.0.0:
   integrity sha512-fzeiFOXqsMiFAFUnNyC4buERI11vTAuf7JIDWqaiPgBK3R+XJQMSY1LyoXaWspBEFaAkXH/0uMbOv7nttBFztg==
 
 i18next@*:
-  version "22.1.2"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-22.1.2.tgz#3327c6d8c1281011c280c58ad88dc74a329f6bf2"
-  integrity sha512-HqAjWygRuDvMPdAjMgyv3l07PiN7MtBTCh8aud1iwn1FPBNhF0mzFUYQt+aVKZ3OOl0A+KrlqbCjrR1TCGB4Jw==
+  version "22.1.4"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-22.1.4.tgz#907a4e710889ae23fb92f3510a0f7147823f92ff"
+  integrity sha512-MCDtNRyovLY22rgLoZdCzg2QIza1V1A/3Hxb99akJzTDjcqCRWEsglTpFUt0vUjOxSxz+WmxmFETLHORRS+n6Q==
   dependencies:
     "@babel/runtime" "^7.20.6"
 

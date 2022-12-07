@@ -72,8 +72,5 @@
         "@swc/jest"
       ]
     }
-  },
-  "optionalDependencies": {
-    "@next/swc-linux-x64-gnu": "11.1.2"
   }
 }
