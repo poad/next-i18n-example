@@ -4,6 +4,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from '../styles/theme';
 import '../styles/globals.css';
 import { appWithTranslation } from 'next-i18next';
+import i18nextConfig from '../../next-i18next.config';
 
 const App = ({ Component }: AppProps): JSX.Element => (
   <ThemeProvider theme={theme}>
@@ -18,4 +19,4 @@ App.onRedirectCallback = (appState: { targetUrl: string }): void => {
 };
 /* eslint-enable no-restricted-globals */
 
-export default appWithTranslation(App);
+export default appWithTranslation(App, i18nextConfig);
