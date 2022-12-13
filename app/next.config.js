@@ -5,7 +5,10 @@ const config = {
   // i18n,
   trailingSlash: true,
   reactStrictMode: true,
-  swcMinify: false,
+  swcMinify: true,
+  compiler: {
+    emotion: true,
+  },
 };
 
 /** @type {import('next').NextConfig} */
