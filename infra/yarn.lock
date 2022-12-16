@@ -382,9 +382,9 @@ at-least-node@^1.0.0:
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
 
 aws-cdk-lib@*:
-  version "2.55.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.55.0.tgz#9a59439f4e0f866cd57ed7019ef7bfd68413064a"
-  integrity sha512-YCtfmMiITU5ncrrQmq5wls2EeCUOLOBDLWO2ZkaUozIS+VbEDChK8rT66OmgQSPwFntKNSJq0P65tR7kN5/i8g==
+  version "2.55.1"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.55.1.tgz#4044118ff7a38952abf7f10035bcec5dd1a6f8e9"
+  integrity sha512-v0MhL6RqazQ2HKj9TXJvXKQcQNIDYeRzcOJ2xB2Usz56xodArc2goLu2P51X5J84xOO4w2AgNaWMCBzd7MbyOQ==
   dependencies:
     "@aws-cdk/asset-awscli-v1" "^2.2.30"
     "@aws-cdk/asset-kubectl-v20" "^2.1.1"
@@ -400,9 +400,9 @@ aws-cdk-lib@*:
     yaml "1.10.2"
 
 aws-cdk@*:
-  version "2.55.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.55.0.tgz#c766e81804f6989d529606f0eac1d205381c4bfd"
-  integrity sha512-SlsaKh1tEiFLWas99OffxoTLugkEZZHY552QeY4ZPXJaUx9kocGYc9s13IO8Y9/cBfoQVvh2KLev4J2+63vKyg==
+  version "2.55.1"
+  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.55.1.tgz#4ba9d118bda407c14aafc8e2c9f64f72a509efa9"
+  integrity sha512-M/d4lO7rLMvPedNj7pEQtwyxn7nVLluiHggftXlYHOIeaoMG1QCbH1zTuZtMZZxdRRD4ZiOEHvvPYFU/HMcrPQ==
   optionalDependencies:
     fsevents "2.3.2"
 
@@ -480,9 +480,9 @@ confusing-browser-globals@^1.0.10:
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
 constructs@*:
-  version "10.1.190"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.190.tgz#a3c5a497bff4c4a835738137b51967ff07bc97c1"
-  integrity sha512-wGMEBsIKp/tP+b2q3XEtIh/KJPZ2uk7G2XyEbGVEatOo6OQHFhXfBi9BCk8725zuWYP/gZUQJfAvd7KZ+lY5Yw==
+  version "10.1.191"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.191.tgz#9588d06a46678f87e6b2678bf2edd2f81789484d"
+  integrity sha512-TKe0otuo/2X6DKtlKMq78Zx/GIYhj4hmIvaWt0/Faw8u/2/Oj8T7GFvi9QuDP2FBsvEgPE3zPn01EQsAf7wNjg==
 
 create-require@^1.1.0:
   version "1.1.1"
@@ -667,9 +667,9 @@ eslint-plugin-import@*:
     tsconfig-paths "^3.14.1"
 
 eslint-plugin-jest@*:
-  version "27.1.6"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-27.1.6.tgz#361d943f07d1978838e6b852c44a579f3879e332"
-  integrity sha512-XA7RFLSrlQF9IGtAmhddkUkBuICCTuryfOTfCSWcZHiHb69OilIH05oozH2XA6CEOtztnOd0vgXyvxZodkxGjg==
+  version "27.1.7"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-27.1.7.tgz#0351e904afb8d66b7f70452929556dfdc8daba0d"
+  integrity sha512-0QVzf+og4YI1Qr3UoprkqqhezAZjFffdi62b0IurkCXMqPtRW84/UT4CKsYT80h/D82LA9avjO/80Ou1LdgbaQ==
   dependencies:
     "@typescript-eslint/utils" "^5.10.0"
 

@@ -10,7 +10,7 @@
     "release": "yarn build",
     "start": "next start",
     "analyze": "ANALYZE=true next build",
-    "lint": "eslint --ext .ts,.js,.tsx,.jsx src",
+    "lint": "next lint --ext .ts,.js,.tsx,.jsx src",
     "clean": "rimraf build",
     "pretest": "yarn build",
     "all": "yarn install && yarn lint && yarn test",
@@ -29,7 +29,7 @@
     "next-language-detector": "*",
     "react": "*",
     "react-dom": "*",
-    "react-i18next": "~12.1",
+    "react-i18next": "~12.0",
     "web-vitals": "*"
   },
   "devDependencies": {

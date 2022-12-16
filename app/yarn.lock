@@ -2095,9 +2095,9 @@ eslint-plugin-import@*, eslint-plugin-import@^2.26.0:
     tsconfig-paths "^3.14.1"
 
 eslint-plugin-jest@*:
-  version "27.1.6"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-27.1.6.tgz#361d943f07d1978838e6b852c44a579f3879e332"
-  integrity sha512-XA7RFLSrlQF9IGtAmhddkUkBuICCTuryfOTfCSWcZHiHb69OilIH05oozH2XA6CEOtztnOd0vgXyvxZodkxGjg==
+  version "27.1.7"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-27.1.7.tgz#0351e904afb8d66b7f70452929556dfdc8daba0d"
+  integrity sha512-0QVzf+og4YI1Qr3UoprkqqhezAZjFffdi62b0IurkCXMqPtRW84/UT4CKsYT80h/D82LA9avjO/80Ou1LdgbaQ==
   dependencies:
     "@typescript-eslint/utils" "^5.10.0"
 
@@ -3396,9 +3396,9 @@ json5@^1.0.1:
     minimist "^1.2.0"
 
 json5@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.1.tgz#655d50ed1e6f95ad1a3caababd2b0efda10b395c"
-  integrity sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.2.tgz#64471c5bdcc564c18f7c1d4df2e2297f2457c5ab"
+  integrity sha512-46Tk9JiOL2z7ytNQWFLpj99RZkVgeHf87yGQKsIkaPz1qSH9UczKH1rO7K3wgRselo0tYMUNfecYpm/p1vC7tQ==
 
 jsonc-parser@^3.2.0:
   version "3.2.0"
@@ -4039,10 +4039,10 @@ react-dom@*:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-i18next@~12.1:
-  version "12.1.1"
-  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-12.1.1.tgz#2626cdbfe6bcb76ef833861c0184a5c4e5e3c089"
-  integrity sha512-mFdieOI0LDy84q3JuZU6Aou1DoWW2fhapcTGeBS8+vWSJuViuoCLQAMYSb0QoHhXS8B0WKUOPpx4cffAP7r/aA==
+react-i18next@~12.0:
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-12.0.0.tgz#634015a2c035779c5736ae4c2e5c34c1659753b1"
+  integrity sha512-/O7N6aIEAl1FaWZBNvhdIo9itvF/MO/nRKr9pYqRc9LhuC1u21SlfwpiYQqvaeNSEW3g3qUXLREOWMt+gxrWbg==
   dependencies:
     "@babel/runtime" "^7.14.5"
     html-parse-stringify "^3.0.1"
