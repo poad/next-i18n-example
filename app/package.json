@@ -23,7 +23,7 @@
     "@emotion/styled": "*",
     "@mui/icons-material": "*",
     "@mui/material": "*",
-    "i18next": "^22.4.3",
+    "i18next": "^22.4.6",
     "next": "^13",
     "next-i18next": "*",
     "next-language-detector": "*",
