@@ -37,7 +37,7 @@ jobs:
 
     - name: Build (app)
       working-directory: app
-      run: yarn install && yarn lint && rm -rf out .next && yarn build && yarn test && rm -rf out .next
+      run: rm -rf out .next && yarn build && yarn test && rm -rf out .next
 
     - name: Build (infra)
       working-directory: infra
