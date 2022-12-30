@@ -3,9 +3,9 @@
 
 
 "@aws-cdk/asset-awscli-v1@^2.2.30":
-  version "2.2.41"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.41.tgz#7baf752c4035a08428453274b963be800e02fa70"
-  integrity sha512-EMux2QxPDLuEp9O4RRUVWUXc61vVB4j22tUG5Opf+pwHvUYZEYBAfdj3kQGLlBwxA55UuG7EttUGaJGL4OmDjg==
+  version "2.2.45"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.45.tgz#2bb9c55b3d8e59255aab41cafab83cfd4a59d4ca"
+  integrity sha512-fKEHlKX5xFh2DAPn3if0rkGIUqkKwXxZsnT9wrukAa001O6v/HvycP8+9Uk06nEAyvi1F4/ro7JzMgdfzdV9yg==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
@@ -382,9 +382,9 @@ at-least-node@^1.0.0:
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
 
 aws-cdk-lib@*:
-  version "2.56.1"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.56.1.tgz#19c40053973e0e5c9235b62d9c840e198927aa2c"
-  integrity sha512-3/dcJmZQHMnQseKRs2r+RstbLJvXwx+A9aJyeBBEF6qJ0BbxGwOYLsWZeLAcvCDf6DcxuYO3lVf88SlQDz8X+w==
+  version "2.58.1"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.58.1.tgz#f70349b09ea03e28902423c2c76785b96248853c"
+  integrity sha512-Cb7gUYeOVGPana7AOo+1LU6b1sHhHf+Ssyj/aQKWCwAhJkSciF/WWquR6e9FqSbT85LoQWjjJaqcWMqyprW/Rw==
   dependencies:
     "@aws-cdk/asset-awscli-v1" "^2.2.30"
     "@aws-cdk/asset-kubectl-v20" "^2.1.1"
@@ -400,9 +400,9 @@ aws-cdk-lib@*:
     yaml "1.10.2"
 
 aws-cdk@*:
-  version "2.56.1"
-  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.56.1.tgz#0fb0775b51cf42d361b74bdcebc076838c935369"
-  integrity sha512-wyYOZ5XOOukDsKxcRTiqdtKD4gBzGEsT9OPbmfZVGDjVruyQUoTcRLuUmJBjfN5hoZ2DteceFuIDFMx9I+0vrg==
+  version "2.58.1"
+  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.58.1.tgz#c274dfb1257eba2fe40f8a48e5d278cc69089dc3"
+  integrity sha512-XIme5a8cC4vX4KiAHKzX1jEXqvQb8sK1lbL9Zeq2CuXV0+QWRK1dJeeekADi4rA8dN+0HjAMdlP3UQuXYq/qgg==
   optionalDependencies:
     fsevents "2.3.2"
 
@@ -480,9 +480,9 @@ confusing-browser-globals@^1.0.10:
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
 constructs@*:
-  version "10.1.200"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.200.tgz#00e783b49a2f2cd5e86e5b868904041e323312b8"
-  integrity sha512-VnbMKxfJ4Aa4VPHF2cS1RWeaG/VARXr7+/HbgpPs8RbX7k16ZcxbDegg6nJ6vEFqMLRKVFIseliBoFVM3jNxCw==
+  version "10.1.204"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.204.tgz#428a81e32545f4c9b09901a56cdbb1dbc1c58758"
+  integrity sha512-m5fReUvM4WsrqIZJVEwC5wIfT5LvfUn+DRuJd1m1y/Z7Wtbx5Vr6q01wrTTr+8nJIyMsgLsw5tiW7eu5xal4gg==
 
 create-require@^1.1.0:
   version "1.1.1"
@@ -1195,12 +1195,10 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
   integrity sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==
 
-json5@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-1.0.1.tgz#779fb0018604fa854eacbf6252180d83543e3dbe"
-  integrity sha512-aKS4WQjPenRxiQsC93MNfjx+nbF4PAdYzmd/1JIj8HYzqfbu86beTuNgXDzPknWk0n0uARlyewZo4s++ES36Ow==
-  dependencies:
-    minimist "^1.2.0"
+json5@>=2.2.2, json5@^1.0.1:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.2.tgz#64471c5bdcc564c18f7c1d4df2e2297f2457c5ab"
+  integrity sha512-46Tk9JiOL2z7ytNQWFLpj99RZkVgeHf87yGQKsIkaPz1qSH9UczKH1rO7K3wgRselo0tYMUNfecYpm/p1vC7tQ==
 
 jsonfile@^6.0.1:
   version "6.1.0"
@@ -1268,7 +1266,7 @@ minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimist@^1.2.0, minimist@^1.2.6:
+minimist@^1.2.6:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
   integrity sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==
