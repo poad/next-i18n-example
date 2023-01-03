@@ -26,6 +26,7 @@
     "@mui/icons-material": "*",
     "@mui/material": "*",
     "i18next": "*",
+    "json5": ">=2.2.2",
     "next": "^13",
     "next-i18next": "*",
     "next-language-detector": "*",

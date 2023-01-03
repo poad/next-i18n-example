@@ -38,6 +38,7 @@
   "dependencies": {
     "aws-cdk-lib": "*",
     "constructs": "*",
+    "json5": ">=2.2.2",
     "source-map-support": "*"
   },
   "resolutions": {
