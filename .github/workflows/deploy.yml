@@ -58,7 +58,7 @@ jobs:
       run: yarn install; rm -rf build && yarn build
 
     - name: configure aws credentials
-      uses: aws-actions/configure-aws-credentials@v1
+      uses: aws-actions/configure-aws-credentials@v2
       with:
         role-to-assume: ${{ secrets.AWS_OIDC_ROLE_ARN }}
         role-session-name: GitHubActions
