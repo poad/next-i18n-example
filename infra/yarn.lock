@@ -3,9 +3,9 @@
 
 
 "@aws-cdk/asset-awscli-v1@^2.2.97":
-  version "2.2.108"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.108.tgz#500e46b7a0db26eb9f7b4eb421c87c83f14ccccc"
-  integrity sha512-ML3Z/m6D3biTcYFclx5ln3jmj2tR51LFrvqc4IXbraKr3CLsXvnrWHl3DYZQRgLbW1cauOAcoK1Lm5wGnc3pcQ==
+  version "2.2.111"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.111.tgz#ff842db4a99d99fddccdcc843194d876257f0dd7"
+  integrity sha512-7K0fu9oU2PtIp56fOzYIdnL56Y1DpKXgfo01AubQO2PjLvula0g4q6nL8yc5Xtj81R+RS2NRC3NfWMURKj/qcw==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
@@ -13,9 +13,9 @@
   integrity sha512-U1ntiX8XiMRRRH5J1IdC+1t5CE89015cwyt5U63Cpk0GnMlN5+h9WsWMlKlPXZR4rdq/m806JRlBMRpBUB2Dhw==
 
 "@aws-cdk/asset-node-proxy-agent-v5@^2.0.77":
-  version "2.0.87"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.87.tgz#91dd83f059bc4fa0391349094ff532140f4e2d53"
-  integrity sha512-e924ANUrtvv4drdR1bfYn1YigDUgfnUpJO7ygm/6t0VGjmmhXY2g43XT+NIKOrCpC0z2Aqk4o5px8fuPCfmQTw==
+  version "2.0.90"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.90.tgz#7bd8e651e365e7bf976dae4838b6a2340888fdc7"
+  integrity sha512-3oGMm9tNKMAN6RDfzpSJ3v3q1TSSeSEliVZ4q7QKocrkQyVmL8oxr2iEtl+tGHTJhPUWGBP4yLLNVMX6IF2h4Q==
 
 "@balena/dockerignore@^1.0.2":
   version "1.0.2"
@@ -521,9 +521,9 @@ confusing-browser-globals@^1.0.10:
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
 constructs@*:
-  version "10.1.280"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.280.tgz#51ff70d56c2b27a24c4d901068b141188194b37e"
-  integrity sha512-ONyTi3iUCp66xYHVnKx3yp2I7YMfSIKEdssTI3cVkL3SZHUJ/jh7dKb5ycsxEkKyO5MtStEc0r2m2zyq1KXRYA==
+  version "10.1.283"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.283.tgz#5b7c5de15f191186120c961bb76b51ddf8742b97"
+  integrity sha512-Fz0c7B8zCGXKBdzua2903YGs+g0qQ4hCRcDaXmVGBnIusjB53Q531o2comJUCHdXnsg+57mFMZwDxSTISHP+LA==
 
 create-require@^1.1.0:
   version "1.1.1"
@@ -1483,9 +1483,9 @@ prettier-linter-helpers@^1.0.0:
     fast-diff "^1.1.2"
 
 prettier@*:
-  version "2.8.4"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.4.tgz#34dd2595629bfbb79d344ac4a91ff948694463c3"
-  integrity sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==
+  version "2.8.5"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.5.tgz#3dd8ae1ebddc4f6aa419c9b64d8c8319a7e0d982"
+  integrity sha512-3gzuxrHbKUePRBB4ZeU08VNkUcqEHaUaouNt0m7LGP4Hti/NuB07C7PPTM/LkWqXoJYJn2McEo5+kxPNrtQkLQ==
 
 punycode@^2.1.0, punycode@^2.3.0:
   version "2.3.0"
