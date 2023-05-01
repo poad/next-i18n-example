@@ -40,10 +40,6 @@
     "constructs": "*",
     "source-map-support": "*"
   },
-  "resolutions": {
-    "json5": ">=2.2.3",
-    "debug": ">=3.1.0"
-  },
   "jest": {
     "testEnvironment": "node",
     "roots": [

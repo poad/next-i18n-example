@@ -67,10 +67,6 @@
     "tailwindcss": "*",
     "typescript": "*"
   },
-  "resolutions": {
-    "json5": ">=2.2.3",
-    "debug": ">=3.1.0"
-  },
   "jest": {
     "transform": {
       "^.+\\.(t|j)sx?$": [
