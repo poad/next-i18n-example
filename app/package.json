@@ -61,7 +61,6 @@
     "http-server": "*",
     "jest": "*",
     "next-compose-plugins": "*",
-    "next-transpile-modules": "*",
     "postcss": "*",
     "prettier": "*",
     "rimraf": "*",

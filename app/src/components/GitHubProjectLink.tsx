@@ -1,4 +1,4 @@
-import GitHub from '@mui/icons-material/GitHub';
+import { GitHub } from '@mui/icons-material';
 import { Box, Link } from '@mui/material';
 
 interface GitHubProjectLinkProps {
