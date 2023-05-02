@@ -2,6 +2,7 @@
   "name": "next-ts-template",
   "version": "0.0.1",
   "private": true,
+  "type": "commonjs",
   "scripts": {
     "404": "cp out/404/index.html out/404.html",
     "test": "jest --passWithNoTests",
@@ -23,7 +24,6 @@
     "@emotion/react": "*",
     "@emotion/server": "*",
     "@emotion/styled": "*",
-    "@mui/icons-material": "*",
     "@mui/material": "*",
     "i18next": "*",
     "next": "^13",
@@ -31,10 +31,11 @@
     "next-language-detector": "*",
     "react": "*",
     "react-dom": "*",
-    "react-i18next": "~12.2",
+    "react-i18next": "*",
     "web-vitals": "*"
   },
   "devDependencies": {
+    "@mui/icons-material": "*",
     "@next/bundle-analyzer": "^13",
     "@swc/jest": "*",
     "@types/jest": "*",

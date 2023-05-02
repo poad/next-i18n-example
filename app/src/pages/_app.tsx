@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { AppProps } from 'next/app';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from '../styles/theme';
