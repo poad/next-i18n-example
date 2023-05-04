@@ -13,21 +13,6 @@ if [ $result -ne 0 ]; then
   exit $result
 fi
 
-cd "${CURRENT}"/app
-result=$?
-if [ $result -ne 0 ]; then
-  cd "${CUR}"
-  exit $result
-fi
-echo ""
-pwd
-yarn install && yarn upgrade && yarn build
-result=$?
-if [ $result -ne 0 ]; then
-  cd "${CUR}"
-  exit $result
-fi
-
 cd "${CURRENT}"/infra
 result=$?
 if [ $result -ne 0 ]; then
@@ -37,6 +22,21 @@ fi
 echo ""
 pwd
 yarn install && yarn upgrade
+result=$?
+if [ $result -ne 0 ]; then
+  cd "${CUR}"
+  exit $result
+fi
+
+cd "${CURRENT}"/app
+result=$?
+if [ $result -ne 0 ]; then
+  cd "${CUR}"
+  exit $result
+fi
+echo ""
+pwd
+yarn install && yarn upgrade && yarn build
 result=$?
 if [ $result -ne 0 ]; then
   cd "${CUR}"
