@@ -3,21 +3,24 @@ const withBundleAnalyzer = require('@next/bundle-analyzer');
 
 /** @type {import('next').NextConfig} */
 const config = {
+  output: 'export',
   // i18n,
   trailingSlash: true,
   reactStrictMode: true,
   swcMinify: true,
+  cleanDistDir: true,
+  images: {
+    unoptimized: true,
+  },
   compiler: {
     emotion: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
-  transpilePackages: ["@mui/icons-material"],
-  modularizeImports: {
-    "@mui/icons-material/?(((\\w*)?/?)*)": {
-      transform: "@mui/icons-material/{{ matches.[1] }}/{{member}}",
-    },
+  experimental: {
+    //   swcPlugins: [['typewind/swc', {}]],
+    esmExternals: true,
   },
 };
 

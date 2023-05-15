@@ -7,7 +7,7 @@
     "404": "cp out/404/index.html out/404.html",
     "test": "jest --passWithNoTests",
     "dev": "next dev",
-    "prebuild": "yarn install",
+    "prebuild": "yarn generate",
     "build": "next build && next export",
     "release": "yarn build",
     "start": "next start",
@@ -18,7 +18,9 @@
     "pretest": "yarn build",
     "all": "yarn install && yarn lint && yarn test",
     "postbuild": "yarn 404",
-    "serve": "http-server out -p 8080"
+    "serve": "http-server out -p 8080",
+    "generate": "typewind generate",
+    "pregenerate": "yarn install"
   },
   "dependencies": {
     "@emotion/react": "*",
@@ -65,7 +67,8 @@
     "prettier": "*",
     "rimraf": "*",
     "tailwindcss": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "typewind": "*"
   },
   "jest": {
     "transform": {
