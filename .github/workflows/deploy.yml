@@ -21,41 +21,26 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Use Node.js 20.x
+
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      id: pnpm-install
+      with:
+        version: 8.6.1
+        run_install: |
+          - recursive: true
+            args: [--frozen-lockfile, --strict-peer-dependencies]
+          - args: [--global, aws-cdk]
+          
+    - name: Use Node.js 18.x
       uses: actions/setup-node@v3.6.0
       with:
-        node-version: 20.x
+        node-version: 18.x
         check-latest: true
-        cache: yarn
-        cache-dependency-path: |
-          app/yarn.lock
-          infra/yarn.lock
+        cache: pnpm
 
-    - name: Update npm
-      run: sudo npm -g upgrade
-
-    - name: Install aws-cdk
-      run: sudo yarn global add yarn aws-cdk
-
-    - name: Get yarn cache directory path
-      id: yarn-cache-dir-path
-      run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-
-    - uses: actions/cache@v3
-      id: yarn-cache
-      with:
-        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-yarn-
-
-    - name: Build (app)
-      working-directory: app
-      run: yarn install && yarn lint && rm -rf out .next && yarn release && yarn test && rm -rf out .next
-
-    - name: Build (infra)
-      working-directory: infra
-      run: yarn install; rm -rf build && yarn build
+    - name: Build
+      run: pnpm -r build
 
     - name: configure aws credentials
       uses: aws-actions/configure-aws-credentials@v2

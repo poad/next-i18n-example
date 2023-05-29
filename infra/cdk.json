@@ -1,5 +1,5 @@
 {
-  "app": "yarn ts-node --prefer-ts-exts bin/infra.ts",
+  "app": "npx ts-node --prefer-ts-exts bin/infra.ts",
   "watch": {
     "include": [
       "**"
@@ -18,17 +18,6 @@
   },
   "requireApproval": "never",
   "context": {
-    "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
-    "@aws-cdk/core:stackRelativeExports": true,
-    "@aws-cdk/aws-rds:lowercaseDbIdentifier": true,
-    "@aws-cdk/aws-lambda:recognizeVersionProps": true,
-    "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true,
-    "@aws-cdk-containers/ecs-service-extensions:enableDefaultLogDriver": true,
-    "@aws-cdk/aws-ec2:uniqueImdsv2TemplateName": true,
-    "@aws-cdk/core:target-partitions": [
-      "aws",
-      "aws-cn"
-    ],
     "dev": {
       "appName": "next-i18n-example"      
     }

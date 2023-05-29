@@ -19,7 +19,6 @@ const config = {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    //   swcPlugins: [['typewind/swc', {}]],
     esmExternals: true,
   },
 };
