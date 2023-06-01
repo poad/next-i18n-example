@@ -228,9 +228,9 @@
   integrity sha512-JJulVEQXmiY9Px5axXHeYGLSjhkZEnD+MDPDGbCbIAbMslkKwmygtZFy1X6s/075Yo94sf8GuSlFfPzysQrWZQ==
 
 "@types/prettier@*":
-  version "2.7.2"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.7.2.tgz#6c2324641cc4ba050a8c710b2b251b377581fbf0"
-  integrity sha512-KufADq8uQqo1pYKVIYzfKbJfBAc0sOeXqGbFaSpv8MRmC/zXgowNZmFcbngndGk922QDmOASEXUZCaY48gs4cg==
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.7.3.tgz#3e51a17e291d01d17d3fc61422015a933af7a08f"
+  integrity sha512-+68kP9yzs4LMp7VNh8gdzMSPZFL44MLGqiHWvttYJe+6qnuVr4Ek9wSBQoveqY/r+LwjCcU29kNVkidwim+kYA==
 
 "@types/semver@^7.3.12":
   version "7.5.0"
@@ -532,9 +532,9 @@ confusing-browser-globals@^1.0.10:
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
 constructs@*:
-  version "10.2.38"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.38.tgz#79b3aab6b5321bcb7dc30bb5d905f048b28d3efb"
-  integrity sha512-UIgZLrSmrYSNiCFGris3vxTGtD7efUDSsvdhB8wj7WEW05atiFO5GOCq8PxXoHdPNXrDk2D/0OZRu6ZAnq/qqA==
+  version "10.2.39"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.39.tgz#115a5f6601aa968eb120cfb34675805d20d39f14"
+  integrity sha512-63eRvg9QYDTh8Vn3c+InrFjvjeZohl4Lwg6g2tWXWT5eBlSaOJcYdBBVKI9GkIc4B1OV/sRtUjgt39aAgujgQw==
 
 create-require@^1.1.0:
   version "1.1.1"
