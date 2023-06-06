@@ -5,12 +5,14 @@ import '../styles/globals.css';
 import { appWithTranslation } from 'next-i18next';
 import i18nextConfig from '../../next-i18next.config';
 
-const App = ({ Component }: AppProps): JSX.Element => (
-  <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <Component />
-  </ThemeProvider>
-);
+function App({ Component }: AppProps) {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Component />
+    </ThemeProvider>
+  );
+};
 
 /* eslint-disable no-restricted-globals */
 App.onRedirectCallback = (appState: { targetUrl: string }): void => {
