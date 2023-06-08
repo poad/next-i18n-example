@@ -19,6 +19,7 @@
     "pretest": "pnpm build",
     "all": "pnpm install && pnpm lint && pnpm test",
     "postbuild": "pnpm 404",
+    "post404": "cp public/favicon.ico out",
     "prestyle-check": "pnpm install",
     "preformat": "pnpm install",
     "prelint": "pnpm style-check",

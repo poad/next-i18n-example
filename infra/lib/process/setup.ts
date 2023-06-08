@@ -21,11 +21,7 @@ export const nextJsExport = () => {
       shell: 'bash',
     });
   });
-  fs.copyFileSync(
-    `${process.cwd()}/../app/public/favicon.ico`,
-    `${process.cwd()}/../app/out/favicon.ico`,
-  );
-
+  
   ['function'].forEach((f) => {
     fs.readdirSync(`${process.cwd()}/${f}`, {
       withFileTypes: true,
