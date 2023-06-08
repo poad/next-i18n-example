@@ -13,7 +13,7 @@ export const nextJsExport = () => {
     },
   );
 
-  ['yarn release'].forEach((cmd) => {
+  ['pnpm -r build'].forEach((cmd) => {
     childProcess.execSync(cmd, {
       cwd: `${process.cwd()}/../app`,
       stdio: ['ignore', 'inherit', 'inherit'],
@@ -42,7 +42,7 @@ export const nextJsExport = () => {
           });
         }
       });
-    ['yarn install'].forEach((cmd) => {
+    ['pnpm -r install'].forEach((cmd) => {
       childProcess.execSync(cmd, {
         cwd: `${process.cwd()}/${f}/`,
         stdio: ['ignore', 'inherit', 'inherit'],
@@ -53,7 +53,7 @@ export const nextJsExport = () => {
   });
 
   ['function'].forEach((f) => {
-    childProcess.execSync('yarn build', {
+    childProcess.execSync('pnpm build', {
       cwd: path.resolve(`${process.cwd()}/${f}/`),
       stdio: ['ignore', 'inherit', 'inherit'],
       env: { ...process.env },
