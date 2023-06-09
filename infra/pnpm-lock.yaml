@@ -7,10 +7,10 @@ settings:
 dependencies:
   aws-cdk-lib:
     specifier: ^2.83.0
-    version: 2.83.0(constructs@10.2.46)
+    version: 2.83.0(constructs@10.2.47)
   constructs:
-    specifier: ^10.2.46
-    version: 10.2.46
+    specifier: ^10.2.47
+    version: 10.2.47
   source-map-support:
     specifier: ^0.5.21
     version: 0.5.21
@@ -72,8 +72,8 @@ packages:
     resolution: {integrity: sha512-U1ntiX8XiMRRRH5J1IdC+1t5CE89015cwyt5U63Cpk0GnMlN5+h9WsWMlKlPXZR4rdq/m806JRlBMRpBUB2Dhw==}
     dev: false
 
-  /@aws-cdk/asset-node-proxy-agent-v5@2.0.158:
-    resolution: {integrity: sha512-MJrvz745huh8A+WUsH51RYXqSah82dwYS8O92AQF7cPphkHA58H8KA2pXhcrjyt0Nkh47Ax6lA5ujHbPJbUrQg==}
+  /@aws-cdk/asset-node-proxy-agent-v5@2.0.159:
+    resolution: {integrity: sha512-XIcDI+5N6/ovx2rD9OlEhMoQt+Z1FNLvgN06n+I9+cBmiilZkNslJdx6svfcExyom3wVn+qZ1+NTf2lX+amLaQ==}
     dev: false
 
   /@cspotcode/source-map-support@0.8.1:
@@ -439,7 +439,7 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /aws-cdk-lib@2.83.0(constructs@10.2.46):
+  /aws-cdk-lib@2.83.0(constructs@10.2.47):
     resolution: {integrity: sha512-ZVirllZyKkl1v6bvpCiQyWFEgCKlCuQrcLxSsaSQPABfC3Oa4OfwPOrWuanxAwovMBlyOGjQ+D5K056d5pHJUg==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
@@ -447,8 +447,8 @@ packages:
     dependencies:
       '@aws-cdk/asset-awscli-v1': 2.2.186
       '@aws-cdk/asset-kubectl-v20': 2.1.1
-      '@aws-cdk/asset-node-proxy-agent-v5': 2.0.158
-      constructs: 10.2.46
+      '@aws-cdk/asset-node-proxy-agent-v5': 2.0.159
+      constructs: 10.2.47
     dev: false
     bundledDependencies:
       - '@balena/dockerignore'
@@ -531,8 +531,8 @@ packages:
     resolution: {integrity: sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==}
     dev: true
 
-  /constructs@10.2.46:
-    resolution: {integrity: sha512-65xztcy6yV47/Lacfb38JMB5AHQTSr7I9nnSkcUlbzaJFQRYyGa1619RCsmPMe/KayHzg5zn7P+bV1OLrdLDjQ==}
+  /constructs@10.2.47:
+    resolution: {integrity: sha512-gy1TBktMG31cN8IHT0BqXhVMjjhjr59f7U8a2TfKmirEfJKDrK0vwbGDm9lXWWzvDrNwBnNWSv7jQ8f8x/Ivuw==}
     engines: {node: '>= 16.14.0'}
     dev: false
 

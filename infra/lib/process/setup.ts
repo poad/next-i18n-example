@@ -3,16 +3,6 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 export const nextJsExport = () => {
-  [`${process.cwd()}/../app/.next`, `${process.cwd()}/../app/out`].forEach(
-    (dir) => {
-      if (fs.existsSync(dir)) {
-        fs.rmdirSync(dir, {
-          recursive: true,
-        });
-      }
-    },
-  );
-
   ['pnpm -r build'].forEach((cmd) => {
     childProcess.execSync(cmd, {
       cwd: `${process.cwd()}/../app`,
@@ -38,7 +28,7 @@ export const nextJsExport = () => {
           });
         }
       });
-    ['pnpm -r install'].forEach((cmd) => {
+    ['pnpm install'].forEach((cmd) => {
       childProcess.execSync(cmd, {
         cwd: `${process.cwd()}/${f}/`,
         stdio: ['ignore', 'inherit', 'inherit'],
