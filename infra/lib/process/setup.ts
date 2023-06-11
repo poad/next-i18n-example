@@ -3,15 +3,6 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 export const nextJsExport = () => {
-  ['pnpm -r build'].forEach((cmd) => {
-    childProcess.execSync(cmd, {
-      cwd: `${process.cwd()}/../app`,
-      stdio: ['ignore', 'inherit', 'inherit'],
-      env: { ...process.env },
-      shell: 'bash',
-    });
-  });
-  
   ['function'].forEach((f) => {
     fs.readdirSync(`${process.cwd()}/${f}`, {
       withFileTypes: true,
@@ -44,6 +35,15 @@ export const nextJsExport = () => {
       stdio: ['ignore', 'inherit', 'inherit'],
       env: { ...process.env },
       shell: process.env.SHELL || 'bash',
+    });
+  });
+
+  ['pnpm build'].forEach((cmd) => {
+    childProcess.execSync(cmd, {
+      cwd: `${process.cwd()}/../app`,
+      stdio: ['ignore', 'inherit', 'inherit'],
+      env: { ...process.env },
+      shell: 'bash',
     });
   });
 };
