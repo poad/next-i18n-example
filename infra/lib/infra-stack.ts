@@ -123,5 +123,12 @@ export class InfraStack extends cdk.Stack {
       prune: true,
       cacheControl: [CacheControl.noCache()],
     });
+
+    // eslint-disable-next-line no-new
+    new cdk.CfnOutput(this, 'Distribution Domain', {
+      value: distoribution.distributionDomainName,
+    });
+
+    console.log(distoribution.distributionDomainName);
   }
 }
