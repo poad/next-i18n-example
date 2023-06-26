@@ -1133,7 +1133,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.22.3
       '@types/prop-types': 15.7.5
-      '@types/react-is': 18.2.0
+      '@types/react-is': 18.2.1
       prop-types: 15.8.1
       react: 18.2.0
       react-is: 18.2.0
@@ -1521,8 +1521,8 @@ packages:
   /@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
 
-  /@types/react-is@18.2.0:
-    resolution: {integrity: sha512-1vz2yObaQkLL7YFe/pme2cpvDsCwI1WXIfL+5eLz0MI9gFG24Re16RzUsI8t9XZn9ZWvgLNDrJBmrqXJO7GNQQ==}
+  /@types/react-is@18.2.1:
+    resolution: {integrity: sha512-wyUkmaaSZEzFZivD8F2ftSyAfk6L+DfFliVj/mYdOXbVjRcS87fQJLTnhk6dRZPuJjI+9g6RZJO4PNCngUrmyw==}
     dependencies:
       '@types/react': 18.2.8
 
