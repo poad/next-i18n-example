@@ -436,8 +436,8 @@ packages:
       '@babel/helper-plugin-utils': 7.22.5
     dev: true
 
-  /@babel/plugin-syntax-typescript@7.21.4(@babel/core@7.22.5):
-    resolution: {integrity: sha512-xz0D39NvhQn4t4RNsHmDnnsaQizIlUkdtYvLs8La1BlfjQ6JEwxkJGeqJMW2tAXx+q6H+WFuUTXNdYVpEya0YA==}
+  /@babel/plugin-syntax-typescript@7.22.5(@babel/core@7.22.5):
+    resolution: {integrity: sha512-1mS2o03i7t1c6VzH6fdQ3OA8tcEIxwG18zIPRp+UY1Ihv6W+XZzBCVxExF9upussPXJ0xE9XRHwMoNs1ep/nRQ==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -4060,7 +4060,7 @@ packages:
       '@babel/core': 7.22.5
       '@babel/generator': 7.22.5
       '@babel/plugin-syntax-jsx': 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-syntax-typescript': 7.21.4(@babel/core@7.22.5)
+      '@babel/plugin-syntax-typescript': 7.22.5(@babel/core@7.22.5)
       '@babel/traverse': 7.22.5
       '@babel/types': 7.22.5
       '@jest/expect-utils': 29.5.0
