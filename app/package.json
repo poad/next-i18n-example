@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@mui/icons-material": "^5.11.16",
-    "@next/bundle-analyzer": "^13.4.4",
+    "@next/bundle-analyzer": "^13.4.7",
     "@swc/jest": "^0.2.26",
     "@types/jest": "^29.5.2",
     "@types/node": "^20.3.2",
