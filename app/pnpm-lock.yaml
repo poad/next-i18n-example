@@ -3959,8 +3959,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /jest-leak-detector@29.5.0:
-    resolution: {integrity: sha512-u9YdeeVnghBUtpN5mVxjID7KbkKE1QU4f6uUwuxiY0vYRi9BUCLKlPEZfDGR67ofdFmDz9oPAy2G92Ujrntmow==}
+  /jest-leak-detector@29.6.0:
+    resolution: {integrity: sha512-JdV6EZOPxHR1gd6ccxjNowuROkT2jtGU5G/g58RcJX1xe5mrtLj0g6/ZkyMoXF4cs+tTkHMFX6pcIrB1QPQwCw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       jest-get-type: 29.4.3
@@ -4069,7 +4069,7 @@ packages:
       jest-docblock: 29.4.3
       jest-environment-node: 29.5.0
       jest-haste-map: 29.6.0
-      jest-leak-detector: 29.5.0
+      jest-leak-detector: 29.6.0
       jest-message-util: 29.6.0
       jest-resolve: 29.6.0
       jest-runtime: 29.6.0
