@@ -735,48 +735,6 @@ packages:
       slash: 3.0.0
     dev: true
 
-  /@jest/core@29.5.0:
-    resolution: {integrity: sha512-28UzQc7ulUrOQw1IsN/kv1QES3q2kkbl/wGslyhAclqZ/8cMdB5M68BffkIdSJgKBUt50d3hbwJ92XESlE7LiQ==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    peerDependencies:
-      node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
-    peerDependenciesMeta:
-      node-notifier:
-        optional: true
-    dependencies:
-      '@jest/console': 29.6.0
-      '@jest/reporters': 29.6.0
-      '@jest/test-result': 29.6.0
-      '@jest/transform': 29.6.0
-      '@jest/types': 29.6.0
-      '@types/node': 20.3.3
-      ansi-escapes: 4.3.2
-      chalk: 4.1.2
-      ci-info: 3.8.0
-      exit: 0.1.2
-      graceful-fs: 4.2.11
-      jest-changed-files: 29.5.0
-      jest-config: 29.6.0(@types/node@20.3.3)
-      jest-haste-map: 29.6.0
-      jest-message-util: 29.6.0
-      jest-regex-util: 29.4.3
-      jest-resolve: 29.6.0
-      jest-resolve-dependencies: 29.6.0
-      jest-runner: 29.6.0
-      jest-runtime: 29.6.0
-      jest-snapshot: 29.6.0
-      jest-util: 29.6.0
-      jest-validate: 29.6.0
-      jest-watcher: 29.6.0
-      micromatch: 4.0.5
-      pretty-format: 29.6.0
-      slash: 3.0.0
-      strip-ansi: 6.0.1
-    transitivePeerDependencies:
-      - supports-color
-      - ts-node
-    dev: true
-
   /@jest/core@29.6.0:
     resolution: {integrity: sha512-5dbMHfY/5R9m8NbgmB3JlxQqooZ/ooPSOiwEQZZ+HODwJTbIu37seVcZNBK29aMdXtjvTRB3f6LCvkKq+r8uQA==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -4241,7 +4199,7 @@ packages:
       node-notifier:
         optional: true
     dependencies:
-      '@jest/core': 29.5.0
+      '@jest/core': 29.6.0
       '@jest/types': 29.5.0
       import-local: 3.1.0
       jest-cli: 29.6.0(@types/node@20.3.3)
