@@ -41,7 +41,7 @@
     "web-vitals": "^3.3.2"
   },
   "devDependencies": {
-    "@mui/icons-material": "^5.11.16",
+    "@mui/icons-material": "^5.13.7",
     "@next/bundle-analyzer": "^13.4.8",
     "@swc/jest": "^0.2.26",
     "@types/jest": "^29.5.2",
