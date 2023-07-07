@@ -905,8 +905,8 @@ packages:
       collect-v8-coverage: 1.0.1
     dev: true
 
-  /@jest/test-sequencer@29.6.0:
-    resolution: {integrity: sha512-HYCS3LKRQotKWj2mnA3AN13PPevYZu8MJKm12lzYojpJNnn6kI/3PWmr1At/e3tUu+FHQDiOyaDVuR4EV3ezBw==}
+  /@jest/test-sequencer@29.6.1:
+    resolution: {integrity: sha512-oBkC36PCDf/wb6dWeQIhaviU0l5u6VCsXa119yqdUosYAt7/FbQU2M2UoziO3igj/HBDEgp57ONQ3fm0v9uyyg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@jest/test-result': 29.6.1
@@ -3856,7 +3856,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.22.8
-      '@jest/test-sequencer': 29.6.0
+      '@jest/test-sequencer': 29.6.1
       '@jest/types': 29.6.1
       '@types/node': 20.3.3
       babel-jest: 29.6.0(@babel/core@7.22.8)
