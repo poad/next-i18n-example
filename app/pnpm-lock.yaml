@@ -794,13 +794,6 @@ packages:
       jest-mock: 29.6.1
     dev: true
 
-  /@jest/expect-utils@29.5.0:
-    resolution: {integrity: sha512-fmKzsidoXQT2KwnrwE0SQq3uj8Z763vzR8LnLBwC2qYWEFpjX8daRsk6rHUM1QvNlEW/UJXNXm59ztmJJWs2Mg==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    dependencies:
-      jest-get-type: 29.4.3
-    dev: true
-
   /@jest/expect-utils@29.6.1:
     resolution: {integrity: sha512-o319vIf5pEMx0LmzSxxkYYxo4wrRLKHq9dP1yJU7FoPTB0LfAKSz8SWD6D/6U3v/O52t9cF5t+MeJiRsfk7zMw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -1517,7 +1510,7 @@ packages:
   /@types/jest@29.5.2:
     resolution: {integrity: sha512-mSoZVJF5YzGVCk+FsDxzDuH7s+SCkzrgKZzf0Z0T2WudhBUPoF6ktoTPC4R0ZoCPCV5xUvuU6ias5NvxcBcMMg==}
     dependencies:
-      expect: 29.5.0
+      expect: 29.6.1
       pretty-format: 29.6.0
     dev: true
 
@@ -3003,17 +2996,6 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /expect@29.5.0:
-    resolution: {integrity: sha512-yM7xqUrCO2JdpFo4XpM82t+PJBFybdqoQuJLDGeDX2ij8NZzqRHyu3Hp188/JX7SWqud+7t4MUdvcgGBICMHZg==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    dependencies:
-      '@jest/expect-utils': 29.5.0
-      jest-get-type: 29.4.3
-      jest-matcher-utils: 29.6.1
-      jest-message-util: 29.6.0
-      jest-util: 29.6.1
-    dev: true
-
   /expect@29.6.1:
     resolution: {integrity: sha512-XEdDLonERCU1n9uR56/Stx9OqojaLAQtZf9PrCHH9Hl8YXiEIka3H4NXJ3NOIBmQJTg7+j7buh34PMHfJujc8g==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -3950,21 +3932,6 @@ packages:
       jest-diff: 29.6.1
       jest-get-type: 29.4.3
       pretty-format: 29.6.1
-    dev: true
-
-  /jest-message-util@29.6.0:
-    resolution: {integrity: sha512-mkCp56cETbpoNtsaeWVy6SKzk228mMi9FPHSObaRIhbR2Ujw9PqjW/yqVHD2tN1bHbC8ol6h3UEo7dOPmIYwIA==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    dependencies:
-      '@babel/code-frame': 7.22.5
-      '@jest/types': 29.6.1
-      '@types/stack-utils': 2.0.1
-      chalk: 4.1.2
-      graceful-fs: 4.2.11
-      micromatch: 4.0.5
-      pretty-format: 29.6.1
-      slash: 3.0.0
-      stack-utils: 2.0.6
     dev: true
 
   /jest-message-util@29.6.1:
