@@ -747,7 +747,7 @@ packages:
       '@jest/console': 29.6.1
       '@jest/reporters': 29.6.0
       '@jest/test-result': 29.6.1
-      '@jest/transform': 29.6.0
+      '@jest/transform': 29.6.1
       '@jest/types': 29.6.1
       '@types/node': 20.3.3
       ansi-escapes: 4.3.2
@@ -854,7 +854,7 @@ packages:
       '@bcoe/v8-coverage': 0.2.3
       '@jest/console': 29.6.1
       '@jest/test-result': 29.6.1
-      '@jest/transform': 29.6.0
+      '@jest/transform': 29.6.1
       '@jest/types': 29.6.1
       '@jridgewell/trace-mapping': 0.3.18
       '@types/node': 20.3.3
@@ -915,8 +915,8 @@ packages:
       slash: 3.0.0
     dev: true
 
-  /@jest/transform@29.6.0:
-    resolution: {integrity: sha512-bhP/KxPo3e322FJ0nKAcb6WVK76ZYyQd1lWygJzoSqP8SYMSLdxHqP4wnPTI4WvbB8PKPDV30y5y7Tya4RHOBA==}
+  /@jest/transform@29.6.1:
+    resolution: {integrity: sha512-URnTneIU3ZjRSaf906cvf6Hpox3hIeJXRnz3VDSw5/X93gR8ycdfSIEy19FlVx8NFmpN7fe3Gb1xF+NjXaQLWg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@babel/core': 7.22.8
@@ -1993,7 +1993,7 @@ packages:
       '@babel/core': ^7.8.0
     dependencies:
       '@babel/core': 7.22.8
-      '@jest/transform': 29.6.0
+      '@jest/transform': 29.6.1
       '@types/babel__core': 7.20.1
       babel-plugin-istanbul: 6.1.1
       babel-preset-jest: 29.5.0(@babel/core@7.22.8)
@@ -4062,7 +4062,7 @@ packages:
       '@jest/console': 29.6.1
       '@jest/environment': 29.6.0
       '@jest/test-result': 29.6.1
-      '@jest/transform': 29.6.0
+      '@jest/transform': 29.6.1
       '@jest/types': 29.6.1
       '@types/node': 20.3.3
       chalk: 4.1.2
@@ -4093,7 +4093,7 @@ packages:
       '@jest/globals': 29.6.0
       '@jest/source-map': 29.6.0
       '@jest/test-result': 29.6.1
-      '@jest/transform': 29.6.0
+      '@jest/transform': 29.6.1
       '@jest/types': 29.6.1
       '@types/node': 20.3.3
       chalk: 4.1.2
@@ -4124,7 +4124,7 @@ packages:
       '@babel/plugin-syntax-typescript': 7.22.5(@babel/core@7.22.8)
       '@babel/types': 7.22.5
       '@jest/expect-utils': 29.6.0
-      '@jest/transform': 29.6.0
+      '@jest/transform': 29.6.1
       '@jest/types': 29.6.1
       '@types/prettier': 2.7.3
       babel-preset-current-node-syntax: 1.0.1(@babel/core@7.22.8)
