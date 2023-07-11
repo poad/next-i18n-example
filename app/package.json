@@ -44,7 +44,7 @@
     "@mui/icons-material": "^5.13.7",
     "@next/bundle-analyzer": "^13.4.9",
     "@swc/jest": "^0.2.26",
-    "@types/jest": "^29.5.2",
+    "@types/jest": "^29.5.3",
     "@types/node": "^20.4.1",
     "@types/react": "^18.2.14",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
