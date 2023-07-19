@@ -30,7 +30,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.14.0",
+    "@mui/material": "^5.14.1",
     "i18next": "^22.5.1",
     "next": "^13.4.10",
     "next-i18next": "^13.3.0",
