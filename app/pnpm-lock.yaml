@@ -721,18 +721,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /@jest/console@29.6.1:
-    resolution: {integrity: sha512-Aj772AYgwTSr5w8qnyoJ0eDYvN6bMsH3ORH1ivMotrInHLKdUz6BDlaEXHdM6kODaBIkNIyQGzsMvRdOv7VG7Q==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    dependencies:
-      '@jest/types': 29.6.1
-      '@types/node': 20.4.5
-      chalk: 4.1.2
-      jest-message-util: 29.6.2
-      jest-util: 29.6.2
-      slash: 3.0.0
-    dev: true
-
   /@jest/console@29.6.2:
     resolution: {integrity: sha512-0N0yZof5hi44HAR2pPS+ikJ3nzKNoZdVu8FffRf3wy47I7Dm7etk/3KetMdRUqzVd16V4O2m2ISpNTbnIuqy1w==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -754,9 +742,9 @@ packages:
       node-notifier:
         optional: true
     dependencies:
-      '@jest/console': 29.6.1
-      '@jest/reporters': 29.6.1
-      '@jest/test-result': 29.6.1
+      '@jest/console': 29.6.2
+      '@jest/reporters': 29.6.2
+      '@jest/test-result': 29.6.2
       '@jest/transform': 29.6.2
       '@jest/types': 29.6.1
       '@types/node': 20.4.5
@@ -852,8 +840,8 @@ packages:
       - supports-color
     dev: true
 
-  /@jest/reporters@29.6.1:
-    resolution: {integrity: sha512-9zuaI9QKr9JnoZtFQlw4GREQbxgmNYXU6QuWtmuODvk5nvPUeBYapVR/VYMyi2WSx3jXTLJTJji8rN6+Cm4+FA==}
+  /@jest/reporters@29.6.2:
+    resolution: {integrity: sha512-sWtijrvIav8LgfJZlrGCdN0nP2EWbakglJY49J1Y5QihcQLfy7ovyxxjJBRXMNltgt4uPtEcFmIMbVshEDfFWw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     peerDependencies:
       node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
@@ -862,8 +850,8 @@ packages:
         optional: true
     dependencies:
       '@bcoe/v8-coverage': 0.2.3
-      '@jest/console': 29.6.1
-      '@jest/test-result': 29.6.1
+      '@jest/console': 29.6.2
+      '@jest/test-result': 29.6.2
       '@jest/transform': 29.6.2
       '@jest/types': 29.6.1
       '@jridgewell/trace-mapping': 0.3.18
@@ -905,16 +893,6 @@ packages:
       graceful-fs: 4.2.11
     dev: true
 
-  /@jest/test-result@29.6.1:
-    resolution: {integrity: sha512-Ynr13ZRcpX6INak0TPUukU8GWRfm/vAytE3JbJNGAvINySWYdfE7dGZMbk36oVuK4CigpbhMn8eg1dixZ7ZJOw==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    dependencies:
-      '@jest/console': 29.6.1
-      '@jest/types': 29.6.1
-      '@types/istanbul-lib-coverage': 2.0.4
-      collect-v8-coverage: 1.0.2
-    dev: true
-
   /@jest/test-result@29.6.2:
     resolution: {integrity: sha512-3VKFXzcV42EYhMCsJQURptSqnyjqCGbtLuX5Xxb6Pm6gUf1wIRIl+mandIRGJyWKgNKYF9cnstti6Ls5ekduqw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -929,7 +907,7 @@ packages:
     resolution: {integrity: sha512-oBkC36PCDf/wb6dWeQIhaviU0l5u6VCsXa119yqdUosYAt7/FbQU2M2UoziO3igj/HBDEgp57ONQ3fm0v9uyyg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      '@jest/test-result': 29.6.1
+      '@jest/test-result': 29.6.2
       graceful-fs: 4.2.11
       jest-haste-map: 29.6.2
       slash: 3.0.0
@@ -3760,7 +3738,7 @@ packages:
     dependencies:
       '@jest/environment': 29.6.2
       '@jest/expect': 29.6.2
-      '@jest/test-result': 29.6.1
+      '@jest/test-result': 29.6.2
       '@jest/types': 29.6.1
       '@types/node': 20.4.5
       chalk: 4.1.2
@@ -3793,7 +3771,7 @@ packages:
         optional: true
     dependencies:
       '@jest/core': 29.6.1
-      '@jest/test-result': 29.6.1
+      '@jest/test-result': 29.6.2
       '@jest/types': 29.6.1
       chalk: 4.1.2
       exit: 0.1.2
@@ -4083,7 +4061,7 @@ packages:
       '@jest/fake-timers': 29.6.2
       '@jest/globals': 29.6.2
       '@jest/source-map': 29.6.0
-      '@jest/test-result': 29.6.1
+      '@jest/test-result': 29.6.2
       '@jest/transform': 29.6.2
       '@jest/types': 29.6.1
       '@types/node': 20.4.5
@@ -4203,7 +4181,7 @@ packages:
     resolution: {integrity: sha512-d4wpjWTS7HEZPaaj8m36QiaP856JthRZkrgcIY/7ISoUWPIillrXM23WPboZVLbiwZBt4/qn2Jke84Sla6JhFA==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      '@jest/test-result': 29.6.1
+      '@jest/test-result': 29.6.2
       '@jest/types': 29.6.1
       '@types/node': 20.4.5
       ansi-escapes: 4.3.2
