@@ -904,16 +904,6 @@ packages:
       collect-v8-coverage: 1.0.2
     dev: true
 
-  /@jest/test-sequencer@29.6.1:
-    resolution: {integrity: sha512-oBkC36PCDf/wb6dWeQIhaviU0l5u6VCsXa119yqdUosYAt7/FbQU2M2UoziO3igj/HBDEgp57ONQ3fm0v9uyyg==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    dependencies:
-      '@jest/test-result': 29.6.2
-      graceful-fs: 4.2.11
-      jest-haste-map: 29.6.2
-      slash: 3.0.0
-    dev: true
-
   /@jest/test-sequencer@29.6.2:
     resolution: {integrity: sha512-GVYi6PfPwVejO7slw6IDO0qKVum5jtrJ3KoLGbgBWyr2qr4GaxFV6su+ZAjdTX75Sr1DkMFRk09r2ZVa+wtCGw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -3851,7 +3841,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.22.9
-      '@jest/test-sequencer': 29.6.1
+      '@jest/test-sequencer': 29.6.2
       '@jest/types': 29.6.1
       '@types/node': 20.4.5
       babel-jest: 29.6.2(@babel/core@7.22.9)
