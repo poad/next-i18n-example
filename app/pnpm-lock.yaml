@@ -2986,7 +2986,7 @@ packages:
       '@jest/expect-utils': 29.6.1
       '@types/node': 20.4.5
       jest-get-type: 29.4.3
-      jest-matcher-utils: 29.6.1
+      jest-matcher-utils: 29.6.2
       jest-message-util: 29.6.2
       jest-util: 29.6.2
     dev: true
@@ -3996,16 +3996,6 @@ packages:
     resolution: {integrity: sha512-aNqYhfp5uYEO3tdWMb2bfWv6f0b4I0LOxVRpnRLAeque2uqOVVMLh6khnTcE2qJ5wAKop0HcreM1btoysD6bPQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      jest-get-type: 29.4.3
-      pretty-format: 29.6.2
-    dev: true
-
-  /jest-matcher-utils@29.6.1:
-    resolution: {integrity: sha512-SLaztw9d2mfQQKHmJXKM0HCbl2PPVld/t9Xa6P9sgiExijviSp7TnZZpw2Fpt+OI3nwUO/slJbOfzfUMKKC5QA==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    dependencies:
-      chalk: 4.1.2
-      jest-diff: 29.6.2
       jest-get-type: 29.4.3
       pretty-format: 29.6.2
     dev: true
