@@ -20,6 +20,76 @@ updates:
     rebase-strategy: auto
     assignees:
       - poad
+    groups:
+      nextjs:
+        patterns:
+          - 'next'
+          - '@next/*'
+          - 'eslint-config-next'
+          - 'web-vitals'
+      next-i18next:
+        patterns:
+          - 'next-i18next'
+          - 'next-language-detector'
+      eslint-prettier:
+        patterns:
+          - '@typescript-eslint/*'
+          - 'eslint'
+          - 'eslint-*'
+          - 'prettier'
+        exclude-patterns:
+          - 'eslint-config-next'
+          - 'eslint-plugin-storybook'
+          - 'eslint-plugin-jest'
+      storybook:
+        patterns:
+          - '@storybook/*'
+          - 'storybook'
+          - 'eslint-plugin-storybook'
+      react:
+        patterns:
+          - '@types/react*'
+          - 'react*'
+      mui-emotion:
+        patterns:
+          - '@emotion/*'
+          - '@mui/*'
+      tailwindcss:
+        patterns:
+          - 'autoprefixer'
+          - 'postcss'
+          - 'tailwindcss'
+      jest:
+        patterns:
+          - '@types/jest'
+          - '@swc/jest'
+          - 'jest'
+          - 'eslint-plugin-jest'
+      misc:
+        patterns:
+          - '*'
+        exclude-patterns:
+          - 'next'
+          - '@next/*'
+          - 'web-vitals'
+          - 'next-i18next'
+          - 'next-language-detector'
+          - '@typescript-eslint/*'
+          - 'eslint'
+          - 'eslint-*'
+          - 'prettier'
+          - '@storybook/*'
+          - 'storybook'
+          - '@types/react*'
+          - 'react*'
+          - '@emotion/*'
+          - '@mui/*'
+          - 'autoprefixer'
+          - 'postcss'
+          - 'tailwindcss'
+          - '@types/jest'
+          - '@swc/jest'
+          - 'jest'
 
   - package-ecosystem: npm
     directory: '/infta/'
@@ -31,3 +101,7 @@ updates:
     rebase-strategy: auto
     assignees:
       - poad
+    groups:
+      infra:
+        patterns:
+          - '*'
