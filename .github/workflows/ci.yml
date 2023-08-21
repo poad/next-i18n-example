@@ -1,7 +1,7 @@
 name: Build and Test
 
 on:
-  pull_request_target:
+  pull_request:
     branches:
       - main
 
@@ -17,13 +17,12 @@ jobs:
       name: Install pnpm
       id: pnpm-install
       with:
-        version: 8.6.11
         run_install: |
           - recursive: true
             args: [--frozen-lockfile, --strict-peer-dependencies]
 
     - name: Use Node.js 20.x
-      uses: actions/setup-node@v3.6.0
+      uses: actions/setup-node@v3.8.1
       with:
         node-version: 20.x
         check-latest: true
