@@ -79,5 +79,11 @@
         "@swc/jest"
       ]
     }
+  },
+  "packageManager": "pnpm@8.6.12",
+  "engines": {
+    "npm": "use pnpm please!",
+    "yarn": "use pnpm please!",
+    "pnpm": ">=8.6.12"
   }
 }
