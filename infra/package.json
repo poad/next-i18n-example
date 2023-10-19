@@ -16,11 +16,11 @@
     "lint-fix": "prettier --write function bin lib && eslint --fix --ext .ts function bin lib"
   },
   "devDependencies": {
-    "@types/node": "^20.8.6",
+    "@types/node": "^20.8.7",
     "@types/prettier": "^2.7.3",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
-    "aws-cdk": "^2.101.0",
+    "aws-cdk": "^2.102.0",
     "eslint": "^8.51.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
@@ -33,7 +33,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.101.0",
+    "aws-cdk-lib": "^2.102.0",
     "constructs": "^10.3.0",
     "source-map-support": "^0.5.21"
   },
