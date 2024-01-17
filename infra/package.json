@@ -16,7 +16,7 @@
     "lint-fix": "prettier --write function bin lib && eslint --fix --ext .ts function bin lib"
   },
   "devDependencies": {
-    "@types/node": "^20.11.4",
+    "@types/node": "^20.11.5",
     "@types/prettier": "^2.7.3",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
