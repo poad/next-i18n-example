@@ -43,7 +43,7 @@
   "devDependencies": {
     "@mui/icons-material": "^5.15.7",
     "@next/bundle-analyzer": "^13.5.6",
-    "@swc/jest": "^0.2.34",
+    "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.16",
     "@types/react": "^18.2.53",
