@@ -41,12 +41,12 @@
     "web-vitals": "^3.5.2"
   },
   "devDependencies": {
-    "@mui/icons-material": "^5.15.7",
+    "@mui/icons-material": "^5.15.8",
     "@next/bundle-analyzer": "^13.5.6",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.16",
-    "@types/react": "^18.2.54",
+    "@types/react": "^18.2.55",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "autoprefixer": "^10.4.17",
