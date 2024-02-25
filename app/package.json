@@ -30,7 +30,7 @@
     "@emotion/react": "^11.11.3",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.15.10",
+    "@mui/material": "^5.15.11",
     "i18next": "^23.10.0",
     "next": "^14.1.0",
     "next-i18next": "^15.2.0",
@@ -41,7 +41,7 @@
     "web-vitals": "^3.5.2"
   },
   "devDependencies": {
-    "@mui/icons-material": "^5.15.10",
+    "@mui/icons-material": "^5.15.11",
     "@next/bundle-analyzer": "^14.1.0",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
@@ -50,7 +50,7 @@
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "autoprefixer": "^10.4.17",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-import": "^0.13.0",
