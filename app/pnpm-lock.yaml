@@ -157,7 +157,7 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       '@jridgewell/gen-mapping': 0.3.5
-      '@jridgewell/trace-mapping': 0.3.24
+      '@jridgewell/trace-mapping': 0.3.25
 
   /@babel/code-frame@7.23.5:
     resolution: {integrity: sha512-CgH3s1a96LipHCmSUmYFPwY7MNx8C3avkq7i4Wl3cfa662ldtUe4VM1TPXX70pfmrlWTb6jLqTYrZyT2ZTJBgA==}
@@ -198,7 +198,7 @@ packages:
     dependencies:
       '@babel/types': 7.24.0
       '@jridgewell/gen-mapping': 0.3.5
-      '@jridgewell/trace-mapping': 0.3.24
+      '@jridgewell/trace-mapping': 0.3.25
       jsesc: 2.5.2
 
   /@babel/helper-annotate-as-pure@7.22.5:
@@ -869,7 +869,7 @@ packages:
       '@jest/test-result': 29.7.0
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
-      '@jridgewell/trace-mapping': 0.3.24
+      '@jridgewell/trace-mapping': 0.3.25
       '@types/node': 20.11.24
       chalk: 4.1.2
       collect-v8-coverage: 1.0.2
@@ -903,7 +903,7 @@ packages:
     resolution: {integrity: sha512-MHjT95QuipcPrpLM+8JMSzFx6eHp5Bm+4XeFDJlwsvVBjmKNiIAvasGK2fxz2WbGRlnvqehFbh07MMa7n3YJnw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      '@jridgewell/trace-mapping': 0.3.24
+      '@jridgewell/trace-mapping': 0.3.25
       callsites: 3.1.0
       graceful-fs: 4.2.11
     dev: true
@@ -934,7 +934,7 @@ packages:
     dependencies:
       '@babel/core': 7.24.0
       '@jest/types': 29.6.3
-      '@jridgewell/trace-mapping': 0.3.24
+      '@jridgewell/trace-mapping': 0.3.25
       babel-plugin-istanbul: 6.1.1
       chalk: 4.1.2
       convert-source-map: 2.0.0
@@ -969,7 +969,7 @@ packages:
     dependencies:
       '@jridgewell/set-array': 1.2.1
       '@jridgewell/sourcemap-codec': 1.4.15
-      '@jridgewell/trace-mapping': 0.3.24
+      '@jridgewell/trace-mapping': 0.3.25
 
   /@jridgewell/resolve-uri@3.1.2:
     resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
@@ -982,8 +982,8 @@ packages:
   /@jridgewell/sourcemap-codec@1.4.15:
     resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
 
-  /@jridgewell/trace-mapping@0.3.24:
-    resolution: {integrity: sha512-+VaWXDa6+l6MhflBvVXjIEAzb59nQ2JUK3bwRp2zRpPtU+8TFRy9Gg/5oIcNlkEL5PGlBFGfemUVvIgLnTzq7Q==}
+  /@jridgewell/trace-mapping@0.3.25:
+    resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
@@ -2053,7 +2053,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.23.0
-      caniuse-lite: 1.0.30001591
+      caniuse-lite: 1.0.30001593
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -2200,7 +2200,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001591
+      caniuse-lite: 1.0.30001593
       electron-to-chromium: 1.4.690
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
@@ -2256,8 +2256,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /caniuse-lite@1.0.30001591:
-    resolution: {integrity: sha512-PCzRMei/vXjJyL5mJtzNiUCKP59dm8Apqc3PH8gJkMnMXZGox93RbE76jHsmLwmIo6/3nsYIpJtx0O7u5PqFuQ==}
+  /caniuse-lite@1.0.30001593:
+    resolution: {integrity: sha512-UWM1zlo3cZfkpBysd7AS+z+v007q9G1+fLTUU42rQnY6t2axoogPW/xol6T7juU5EUoOhML4WgBIdG+9yYqAjQ==}
 
   /chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -4734,7 +4734,7 @@ packages:
       '@next/env': 14.1.1
       '@swc/helpers': 0.5.2
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001591
+      caniuse-lite: 1.0.30001593
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.2.0
@@ -5929,7 +5929,7 @@ packages:
     resolution: {integrity: sha512-/EH/sDgxU2eGxajKdwLCDmQ4FWq+kpi3uCmBGpw1xJtnAxEjlD8j8PEiGWpCIMIs3ciNAgH0d3TTJiUkYzyZjA==}
     engines: {node: '>=10.12.0'}
     dependencies:
-      '@jridgewell/trace-mapping': 0.3.24
+      '@jridgewell/trace-mapping': 0.3.25
       '@types/istanbul-lib-coverage': 2.0.6
       convert-source-map: 2.0.0
     dev: true
