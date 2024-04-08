@@ -7,7 +7,7 @@ interface CloudFrontRequestEvent {
 }
 function handler(event: CloudFrontRequestEvent) {
   const request = event.request;
-  // eslint-disable-next-line no-var
+
   const uri = request.uri;
 
   // Check whether the URI is missing a file name.

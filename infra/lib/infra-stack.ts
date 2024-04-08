@@ -114,7 +114,6 @@ export class InfraStack extends cdk.Stack {
       }),
     );
 
-    // eslint-disable-next-line no-new
     new s3deploy.BucketDeployment(this, 'DeployWebsite', {
       sources: [s3deploy.Source.asset(`${process.cwd()}/../app/out`)],
       destinationBucket: s3bucket,
@@ -124,7 +123,6 @@ export class InfraStack extends cdk.Stack {
       cacheControl: [CacheControl.noCache()],
     });
 
-    // eslint-disable-next-line no-new
     new cdk.CfnOutput(this, 'Distribution Domain', {
       value: distoribution.distributionDomainName,
     });

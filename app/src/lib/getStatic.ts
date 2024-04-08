@@ -15,7 +15,10 @@ export const getStaticPaths = () => ({
   paths: getI18nPaths(),
 });
 
-export const getI18nProps = async (ctx: Context, ns = ['common']): Promise<SSRConfig> => {
+export const getI18nProps = async (
+  ctx: Context,
+  ns = ['common']
+): Promise<SSRConfig> => {
   const locale = ctx?.params?.locale;
   const props = {
     ...(await serverSideTranslations(locale, ns, i18nextConfig)),
@@ -23,6 +26,8 @@ export const getI18nProps = async (ctx: Context, ns = ['common']): Promise<SSRCo
   return props;
 };
 
-export const makeStaticProps = (ns: string[] = []) => async (ctx: Context) => ({
-  props: await getI18nProps(ctx, ns),
-});
+export const makeStaticProps =
+  (ns: string[] = []) =>
+  async (ctx: Context) => ({
+    props: await getI18nProps(ctx, ns),
+  });

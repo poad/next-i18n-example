@@ -12,12 +12,14 @@ function App({ Component }: AppProps) {
       <Component />
     </ThemeProvider>
   );
-};
+}
 
-/* eslint-disable no-restricted-globals */
 App.onRedirectCallback = (appState: { targetUrl: string }): void => {
-  history.state.push(appState && appState.targetUrl ? appState.targetUrl : window.location.pathname);
+  history.state.push(
+    appState && appState.targetUrl
+      ? appState.targetUrl
+      : window.location.pathname
+  );
 };
-/* eslint-enable no-restricted-globals */
 
 export default appWithTranslation(App, i18nextConfig);

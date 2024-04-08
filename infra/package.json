@@ -10,24 +10,15 @@
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
-    "lint": "eslint --ext .ts function bin lib",
+    "lint": "eslint -c ../eslint.config.mjs './{bin,lib,function}/**/*{.ts,.tsx}'",
     "style-check": "prettier --write function bin lib",
     "format": "prettier --write function bin lib",
-    "lint-fix": "prettier --write function bin lib && eslint --fix --ext .ts function bin lib"
+    "lint-fix": "prettier --write function bin lib && eslint -c ../eslint.config.mjs --fix './{bin,lib,function}/**/*{.ts,.tsx}'"
   },
   "devDependencies": {
     "@types/node": "^20.12.5",
-    "@typescript-eslint/eslint-plugin": "^7.5.0",
-    "@typescript-eslint/parser": "^7.5.0",
     "aws-cdk": "^2.136.0",
-    "eslint": "^8.57.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-airbnb-typescript": "^17.1.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jest": "^27.9.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "prettier": "^3.2.5",
+    "eslint": "^9.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.4"
   },
