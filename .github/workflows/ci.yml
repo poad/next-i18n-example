@@ -13,21 +13,18 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - uses: pnpm/action-setup@v2
-      name: Install pnpm
-      id: pnpm-install
-      with:
-        version: latest
-        run_install: |
-          - recursive: true
-            args: [--frozen-lockfile, --strict-peer-dependencies]
-
     - name: Use Node.js 20.x
       uses: actions/setup-node@v4.0.0
       with:
         node-version: 20.x
         check-latest: true
-        cache: pnpm
+
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      with:
+        run_install: |
+          - recursive: true
+            args: [--frozen-lockfile, --strict-peer-dependencies]
 
     - name: Build (app)
       working-directory: app
