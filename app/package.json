@@ -30,7 +30,7 @@
     "@emotion/react": "^11.11.4",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.11.5",
-    "@mui/material": "^5.15.16",
+    "@mui/material": "^5.15.17",
     "i18next": "^23.11.3",
     "next": "^14.2.3",
     "next-i18next": "^15.3.0",
@@ -41,11 +41,11 @@
     "web-vitals": "^3.5.2"
   },
   "devDependencies": {
-    "@mui/icons-material": "^5.15.16",
+    "@mui/icons-material": "^5.15.17",
     "@next/bundle-analyzer": "^14.2.3",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.8",
+    "@types/node": "^20.12.11",
     "@types/react": "^18.3.1",
     "autoprefixer": "^10.4.19",
     "http-server": "^14.1.1",
