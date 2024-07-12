@@ -30,7 +30,7 @@
     "@emotion/react": "^11.11.4",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.11.5",
-    "@mui/material": "^5.16.0",
+    "@mui/material": "^5.16.1",
     "i18next": "^23.11.5",
     "next": "^14.2.5",
     "next-i18next": "^15.3.0",
@@ -41,7 +41,7 @@
     "web-vitals": "^3.5.2"
   },
   "devDependencies": {
-    "@mui/icons-material": "^5.16.0",
+    "@mui/icons-material": "^5.16.1",
     "@next/bundle-analyzer": "^14.2.5",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
