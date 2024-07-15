@@ -31,7 +31,7 @@
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.16.1",
-    "i18next": "^23.11.5",
+    "i18next": "^23.12.1",
     "next": "^14.2.5",
     "next-i18next": "^15.3.0",
     "next-language-detector": "^1.1.0",
