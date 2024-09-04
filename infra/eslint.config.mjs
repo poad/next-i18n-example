@@ -5,9 +5,6 @@ import stylistic from '@stylistic/eslint-plugin';
 import stylisticTs from '@stylistic/eslint-plugin-ts';
 
 import tseslint from 'typescript-eslint';
-import { FlatCompat } from '@eslint/eslintrc';
-
-const compat = new FlatCompat();
 
 export default tseslint.config(
   {
@@ -32,7 +29,6 @@ export default tseslint.config(
       '@stylistic': stylistic,
       '@stylistic/ts': stylisticTs,
     },
-    // @ts-ignore
     rules: {
       '@stylistic/semi': 'error',
       '@stylistic/ts/indent': ['error', 2],
