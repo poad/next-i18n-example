@@ -11,12 +11,10 @@
     "watch": "tsc -w",
     "cdk": "cdk",
     "lint": "eslint -c ../eslint.config.mjs './{bin,lib,function}/**/*{.ts,.tsx}'",
-    "style-check": "prettier --write function bin lib",
-    "format": "prettier --write function bin lib",
-    "lint-fix": "prettier --write function bin lib && eslint -c ../eslint.config.mjs --fix './{bin,lib,function}/**/*{.ts,.tsx}'"
+    "lint-fix": "eslint -c ../eslint.config.mjs --fix './{bin,lib,function}/**/*{.ts,.tsx}'"
   },
   "devDependencies": {
-    "@types/node": "^20.16.2",
+    "@types/node": "^20.16.4",
     "aws-cdk": "^2.155.0",
     "eslint": "^9.9.1",
     "ts-node": "^10.9.2",

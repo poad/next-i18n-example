@@ -12,8 +12,6 @@
     "analyze": "ANALYZE=true next build",
     "lint": "eslint -c ../eslint.config.mjs './**/*.{ts,tsx}'",
     "lint-fix": "eslint -c ../eslint.config.mjs './**/*.{ts,tsx}' --fix",
-    "style-check": "prettier src",
-    "format": "prettier --write src",
     "clean": "rimraf build",
     "pretest": "pnpm build",
     "all": "pnpm install && pnpm lint && pnpm test",
@@ -21,8 +19,6 @@
     "post404": "cp public/favicon.ico out",
     "prestyle-check": "pnpm install",
     "preformat": "pnpm install",
-    "prelint": "pnpm style-check",
-    "prelint-fix": "pnpm format",
     "serve": "http-server out -p 8080"
   },
   "dependencies": {
@@ -45,13 +41,13 @@
     "@next/bundle-analyzer": "^14.2.7",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.16.2",
+    "@types/node": "^20.16.4",
     "@types/react": "^18.3.5",
     "autoprefixer": "^10.4.20",
     "http-server": "^14.1.1",
     "jest": "^29.7.0",
     "next-compose-plugins": "^2.2.1",
-    "postcss": "^8.4.41",
+    "postcss": "^8.4.45",
     "rimraf": "^5.0.10",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4"
