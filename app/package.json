@@ -41,7 +41,7 @@
     "@next/bundle-analyzer": "^14.2.15",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.13",
-    "@types/node": "^20.16.11",
+    "@types/node": "^20.16.12",
     "@types/react": "^18.3.11",
     "autoprefixer": "^10.4.20",
     "http-server": "^14.1.1",
