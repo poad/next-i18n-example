@@ -28,7 +28,7 @@
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^5.16.7",
     "i18next": "^23.16.5",
-    "next": "^14.2.17",
+    "next": "^14.2.18",
     "next-i18next": "^15.3.1",
     "next-language-detector": "^1.1.0",
     "react": "^18.3.1",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@mui/icons-material": "^5.16.7",
-    "@next/bundle-analyzer": "^14.2.17",
+    "@next/bundle-analyzer": "^14.2.18",
     "@swc/jest": "^0.2.37",
     "@types/jest": "^29.5.14",
     "@types/node": "^20.17.6",
