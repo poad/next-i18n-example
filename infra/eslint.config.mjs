@@ -7,6 +7,9 @@ import stylisticTs from '@stylistic/eslint-plugin-ts';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
+  eslint.configs.recommended,
+  ...tseslint.configs.strict,
+  ...tseslint.configs.stylistic,
   {
     ignores: [
       '**/*.d.ts',
@@ -19,11 +22,6 @@ export default tseslint.config(
       'out',
       '.storybook',
     ],
-  },
-  eslint.configs.recommended,
-  ...tseslint.configs.strict,
-  ...tseslint.configs.stylistic,
-  {
     files: ['src/**/*.{jsx,tsx}'],
     plugins: {
       '@stylistic': stylistic,
@@ -34,8 +32,8 @@ export default tseslint.config(
       '@stylistic/ts/indent': ['error', 2],
       'comma-dangle': ['error', 'always-multiline'],
       'arrow-parens': ['error', 'always'],
-      'semi': ['error', 'always'],
-      'quotes': ['error', 'single'],
+      semi: ['error', 'always'],
+      quotes: ['error', 'single'],
     },
   },
 );
