@@ -26,15 +26,15 @@
     "@stylistic/eslint-plugin-ts": "^2.11.0",
     "eslint": "^9.16.0",
     "eslint-config-import": "^0.13.0",
-    "eslint-config-next": "^14.2.18",
-    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-config-next": "^14.2.19",
+    "eslint-import-resolver-typescript": "^3.7.0",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jest": "^27.9.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "typescript-eslint": "^8.16.0"
+    "typescript-eslint": "^8.17.0"
   },
   "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
 }

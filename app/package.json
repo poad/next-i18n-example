@@ -28,7 +28,7 @@
     "@emotion/styled": "^11.13.5",
     "@mui/material": "^5.16.8",
     "i18next": "^23.16.8",
-    "next": "^14.2.18",
+    "next": "^14.2.19",
     "next-i18next": "^15.4.0",
     "next-language-detector": "^1.1.0",
     "react": "^18.3.1",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@mui/icons-material": "^5.16.8",
-    "@next/bundle-analyzer": "^14.2.18",
+    "@next/bundle-analyzer": "^14.2.19",
     "@swc/jest": "^0.2.37",
     "@types/jest": "^29.5.14",
     "@types/node": "^20.17.9",
@@ -49,7 +49,7 @@
     "next-compose-plugins": "^2.2.1",
     "postcss": "^8.4.49",
     "rimraf": "^5.0.10",
-    "tailwindcss": "^3.4.15",
+    "tailwindcss": "^3.4.16",
     "typescript": "^5.7.2"
   },
   "jest": {
