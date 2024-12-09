@@ -22,10 +22,10 @@
     "serve": "http-server out -p 8080"
   },
   "dependencies": {
-    "@emotion/cache": "^11.13.5",
-    "@emotion/react": "^11.13.5",
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
     "@emotion/server": "^11.11.0",
-    "@emotion/styled": "^11.13.5",
+    "@emotion/styled": "^11.14.0",
     "@mui/material": "^5.16.9",
     "i18next": "^23.16.8",
     "next": "^14.2.20",
