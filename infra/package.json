@@ -16,7 +16,7 @@
   "devDependencies": {
     "@types/node": "^20.17.17",
     "aws-cdk": "^2.178.1",
-    "eslint": "^9.19.0",
+    "eslint": "^9.20.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   },
