@@ -26,7 +26,7 @@
     "@stylistic/eslint-plugin-ts": "^2.13.0",
     "eslint": "^9.20.0",
     "eslint-config-import": "^0.13.0",
-    "eslint-config-next": "^14.2.23",
+    "eslint-config-next": "^14.2.24",
     "eslint-import-resolver-typescript": "^3.7.0",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.31.0",
@@ -34,8 +34,8 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "pnpm": "^10.2.1",
-    "typescript-eslint": "^8.23.0"
+    "pnpm": "^10.3.0",
+    "typescript-eslint": "^8.24.0"
   },
-  "packageManager": "pnpm@10.0.0+sha512.b8fef5494bd3fe4cbd4edabd0745df2ee5be3e4b0b8b08fa643aa3e4c6702ccc0f00d68fa8a8c9858a735a0032485a44990ed2810526c875e416f001b17df12b"
+  "packageManager": "pnpm@10.3.0+sha512.ee592eda8815a8a293c206bb0917c4bb0ff274c50def7cbc17be05ec641fc2d1b02490ce660061356bd0d126a4d7eb2ec8830e6959fb8a447571c631d5a2442d"
 }
