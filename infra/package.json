@@ -10,12 +10,12 @@
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
-    "lint": "eslint -c ../eslint.config.mjs './{bin,lib,function}/**/*{.ts,.tsx}'",
-    "lint-fix": "eslint -c ../eslint.config.mjs --fix './{bin,lib,function}/**/*{.ts,.tsx}'"
+    "lint": "eslint -c ./eslint.config.mjs './{bin,lib,function}/**/*{.ts,.tsx}'",
+    "lint-fix": "eslint -c ./eslint.config.mjs --fix './{bin,lib,function}/**/*{.ts,.tsx}'"
   },
   "devDependencies": {
     "@types/node": "^20.17.19",
-    "aws-cdk": "^2.1000.2",
+    "aws-cdk": "^2.1000.3",
     "eslint": "^9.21.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"

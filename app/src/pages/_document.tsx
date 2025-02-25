@@ -1,79 +1,30 @@
-import * as React from 'react';
-import createEmotionServer from '@emotion/server/create-instance';
-import theme from '../styles/theme';
-import createCache from '@emotion/cache';
-import Document, {
+import {
   Html,
   Head,
   Main,
   NextScript,
-  DocumentContext,
-  DocumentInitialProps,
 } from 'next/document';
-import { i18n } from '../../next-i18next.config';
-import { GetStaticProps } from 'next';
+import {
+  documentGetInitialProps,
+  DocumentHeadTags,
+} from '@mui/material-nextjs/v15-pagesRouter';
 
-export default class NextDocument extends Document {
-  static getStaticProps: GetStaticProps;
-
-  static getInitialProps: (
-    ctx: DocumentContext
-  ) => Promise<DocumentInitialProps>;
-
-  render(): JSX.Element {
-    const currentLocale = this.props.__NEXT_DATA__.locale || i18n.defaultLocale;
-    return (
-      <Html lang={currentLocale}>
-        <Head>
-          {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.primary.main} />
-          {}
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-          />
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
+export default function NextDocument(props) {
+  return (
+    <Html lang="en">
+      <Head>
+        <DocumentHeadTags {...props} />
+        ...
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
 }
 
-NextDocument.getInitialProps = async (ctx: DocumentContext) => {
-  const originalRenderPage = ctx.renderPage;
-
-  const cache = createCache({ key: 'css' });
-  const { extractCriticalToChunks } = createEmotionServer(cache);
-
-  ctx.renderPage = () =>
-    originalRenderPage({
-      enhanceApp: (App: any) => (props) => (
-        <App emotionCache={cache} {...props} />
-      ),
-    });
-
-  const initialProps = await Document.getInitialProps(ctx);
-  // This is important. It prevents emotion to render invalid HTML.
-  // See https://github.com/mui-org/material-ui/issues/26561#issuecomment-855286153
-  const emotionStyles = extractCriticalToChunks(initialProps.html);
-  const emotionStyleTags = emotionStyles.styles.map(
-    (style: { key: React.Key | null | undefined; ids: any[]; css: any }) => (
-      <style
-        data-emotion={`${style.key} ${style.ids.join(' ')}`}
-        key={style.key}
-        dangerouslySetInnerHTML={{ __html: style.css }}
-      />
-    )
-  );
-
-  return {
-    ...initialProps,
-    styles: [
-      ...React.Children.toArray(initialProps.styles),
-      ...emotionStyleTags,
-    ],
-  };
+NextDocument.getInitialProps = async (ctx) => {
+  const finalProps = await documentGetInitialProps(ctx);
+  return finalProps;
 };

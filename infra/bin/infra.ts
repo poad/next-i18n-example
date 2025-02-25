@@ -2,7 +2,7 @@
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import { Tags } from 'aws-cdk-lib';
-import assert = require('node:assert');
+import assert from 'assert';
 import { InfraStack, InfraStackProps } from '../lib/infra-stack';
 import { nextJsExport } from '../lib/process/setup';
 

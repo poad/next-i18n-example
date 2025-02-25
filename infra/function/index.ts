@@ -5,7 +5,8 @@ interface CroudFrontRequest {
 interface CloudFrontRequestEvent {
   request: CroudFrontRequest;
 }
-function handler(event: CloudFrontRequestEvent) {
+
+export function handler(event: CloudFrontRequestEvent) {
   const request = event.request;
 
   const uri = request.uri;
