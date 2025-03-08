@@ -20,14 +20,14 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.0",
-    "@eslint/js": "^9.21.0",
+    "@eslint/js": "^9.22.0",
     "@next/eslint-plugin-next": "^15.2.1",
     "@stylistic/eslint-plugin": "^2.13.0",
     "@stylistic/eslint-plugin-js": "^2.13.0",
     "@stylistic/eslint-plugin-jsx": "^2.13.0",
     "@stylistic/eslint-plugin-plus": "^2.13.0",
     "@stylistic/eslint-plugin-ts": "^2.13.0",
-    "eslint": "^9.21.0",
+    "eslint": "^9.22.0",
     "eslint-config-import": "^0.13.0",
     "eslint-config-next": "^14.2.24",
     "eslint-import-resolver-typescript": "^3.8.3",
@@ -38,8 +38,8 @@
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-storybook": "^0.11.4",
-    "pnpm": "^10.5.2",
+    "pnpm": "^10.6.1",
     "typescript-eslint": "^8.26.0"
   },
-  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
+  "packageManager": "pnpm@10.6.1+sha512.40ee09af407fa9fbb5fbfb8e1cb40fbb74c0af0c3e10e9224d7b53c7658528615b2c92450e74cfad91e3a2dcafe3ce4050d80bda71d757756d2ce2b66213e9a3"
 }
