@@ -14,7 +14,7 @@
     "lint-fix": "eslint -c ./eslint.config.mjs --fix './{bin,lib,function}/**/*{.ts,.tsx}'"
   },
   "devDependencies": {
-    "@types/node": "^20.17.23",
+    "@types/node": "^20.17.24",
     "aws-cdk": "^2.1003.0",
     "eslint": "^9.22.0",
     "ts-node": "^10.9.2",
