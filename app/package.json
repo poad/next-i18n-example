@@ -42,7 +42,7 @@
     "@next/bundle-analyzer": "^14.2.26",
     "@swc/jest": "^0.2.37",
     "@types/jest": "^29.5.14",
-    "@types/node": "^20.17.28",
+    "@types/node": "^20.17.30",
     "@types/react": "^18.3.20",
     "autoprefixer": "^10.4.21",
     "http-server": "^14.1.1",
@@ -51,7 +51,7 @@
     "rimraf": "^5.0.10",
     "styled-jsx": "^5.1.6",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "jest": {
     "transform": {
