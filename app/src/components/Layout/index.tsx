@@ -51,7 +51,6 @@ const Layout = (props: PropsWithChildren<LayoutProps>) => {
       <List>
         {['Info'].map((text) => (
           <ListItem
-            button
             key={text}
             sx={{
               width: drawerWidth,

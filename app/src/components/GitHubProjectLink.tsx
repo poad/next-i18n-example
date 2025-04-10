@@ -1,5 +1,6 @@
 import { GitHub } from '@mui/icons-material';
 import { Box, Link } from '@mui/material';
+import { JSX } from 'react-dom';
 
 interface GitHubProjectLinkProps {
   container?: Element;

@@ -6,6 +6,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import i18nextConfig from '../../next-i18next.config';
 import languageDetector from '../lib/languageDetector';
+import { JSX } from 'react-dom';
 
 const makeHref = (
   pathname: string,

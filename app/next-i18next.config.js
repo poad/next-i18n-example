@@ -1,6 +1,6 @@
-const path = require('path');
+import path from 'path';
 
-module.exports = {
+export default {
   debug: process.env.NODE_ENV === 'development',
   i18n: {
     defaultLocale: 'ja',

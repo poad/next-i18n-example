@@ -1,4 +1,4 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer');
+import withBundleAnalyzer from '@next/bundle-analyzer';
 // const { i18n } = require('./next-i18next.config');
 
 /** @type {import('next').NextConfig} */
@@ -7,7 +7,6 @@ const config = {
   // i18n,
   trailingSlash: true,
   reactStrictMode: true,
-  swcMinify: true,
   cleanDistDir: true,
   images: {
     unoptimized: true,
@@ -23,6 +22,6 @@ const config = {
   },
 };
 
-module.exports = withBundleAnalyzer({
+export default withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 })(config);
