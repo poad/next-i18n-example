@@ -39,7 +39,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-storybook": "^0.11.6",
     "pnpm": "^10.8.1",
-    "typescript-eslint": "^8.29.1"
+    "typescript-eslint": "^8.30.1"
   },
   "packageManager": "pnpm@10.8.1"
 }
