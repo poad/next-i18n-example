@@ -21,7 +21,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.24.0",
-    "@next/eslint-plugin-next": "^15.3.0",
+    "@next/eslint-plugin-next": "^15.3.1",
     "@stylistic/eslint-plugin": "^2.13.0",
     "@stylistic/eslint-plugin-js": "^2.13.0",
     "@stylistic/eslint-plugin-jsx": "^2.13.0",
